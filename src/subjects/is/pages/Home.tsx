@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { CramSection } from '../../../shell/CramSection'
 import { chapterTests, chapters, mockExams } from '../content'
 import { bestPercentageFor, loadProgress } from '../lib/storage'
 import { cn } from '../lib/cn'
@@ -202,8 +201,6 @@ export const Home = () => {
           })}
         </div>
       </section>
-
-      <CramSection subject="is" />
 
       <section className="mt-14 rounded-xl border border-line bg-surface p-6 shadow-card sm:p-8">
         <h2 className="font-serif text-2xl">How to use this site</h2>

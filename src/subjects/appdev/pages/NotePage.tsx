@@ -1,6 +1,4 @@
 import { Link, useParams } from 'react-router-dom'
-import { CramSection } from '../../../shell/CramSection'
-import { buildMarkdownCramSheet } from '../../../shell/detailCram'
 import '../lib/notes.css'
 import { examHref, getNote, testHref, topicForNote } from '../lib/content'
 import { folderLabel, renderMarkdown } from '../lib/markdown'
@@ -65,8 +63,6 @@ export const NotePage = () => {
         className="appdev-note mt-8"
         dangerouslySetInnerHTML={{ __html: renderMarkdown(note.markdown) }}
       />
-
-      <CramSection sheet={buildMarkdownCramSheet(note)} />
 
       <div className="mt-10 flex flex-wrap gap-3 border-t border-line pt-6">
         {topic ? (

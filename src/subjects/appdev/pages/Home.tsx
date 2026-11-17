@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { CramSection } from '../../../shell/CramSection'
 import {
   examHref,
   examList,
@@ -239,8 +238,6 @@ export const Home = () => (
         ))}
       </div>
     </section>
-
-    <CramSection subject="appdev" />
 
     <section className="mt-14 rounded-xl border border-line bg-surface p-6 shadow-card sm:p-8">
       <h2 className="font-serif text-2xl">How to use this site</h2>

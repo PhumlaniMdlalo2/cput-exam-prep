@@ -1,6 +1,4 @@
 import React from 'react';
-import { CramSection } from '../../../shell/CramSection';
-import { buildPmCramSheet } from '../../../shell/detailCram';
 import { chapters } from '../content/chapters';
 import { chapterTests } from '../content/tests';
 import { ContentBlocks } from '../components/ContentBlocks';
@@ -176,8 +174,6 @@ const ChapterDetailView: React.FC<{ id: string; navigate: (route: string) => voi
               ))}
             </div>
           </section>
-
-          <CramSection sheet={buildPmCramSheet(chapter)} />
 
           {test ? (
             <div className="mt-12 rounded-xl border border-line bg-accent-soft/50 p-6 shadow-card">

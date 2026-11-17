@@ -1,7 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
-import { CramSection } from '../../../shell/CramSection'
-import { buildBlockCramSheet } from '../../../shell/detailCram'
 import { chapterById } from '../content'
 import '../lib/quiz-engine.scoped.css'
 
@@ -15,24 +13,14 @@ declare global {
 export const ExamPage = () => {
   const { chapterId } = useParams()
   const containerRef = useRef<HTMLDivElement>(null)
-  const chapter = chapterId
-    ? chapterById[chapterId as keyof typeof chapterById]
-    : undefined
-  const cramSheet = chapter
-    ? buildBlockCramSheet({
-        title: chapter.title,
-        examWeight: chapter.examWeight,
-        description: chapter.description,
-        summary: [],
-        keyTerms: chapter.keyTerms,
-        sections: chapter.sections,
-      })
-    : undefined
   
   useEffect(() => {
     if (!containerRef.current) return
     
     // Set up global variables for quiz engine
+    const chapter = chapterId
+      ? chapterById[chapterId as keyof typeof chapterById]
+      : undefined
     window.QUIZ_TOPICS = {}
     window.STUDY_META = {}
 
@@ -68,12 +56,8 @@ export const ExamPage = () => {
   }, [chapterId])
   
   return (
-    <>
-      <div ref={containerRef} className="exam-container">
-        <div id="app"></div>
-      </div>
-
-      {cramSheet ? <CramSection sheet={cramSheet} /> : <CramSection subject="ep" />}
-    </>
+    <div ref={containerRef} className="exam-container">
+      <div id="app"></div>
+    </div>
   )
 }
