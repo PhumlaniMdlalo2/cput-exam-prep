@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { CramSection } from '../../../shell/CramSection'
+import { buildBlockCramSheet } from '../../../shell/detailCram'
 import { chapterById, chapterTests } from '../content'
 import { ContentBlocks } from '../components/ContentBlocks'
 import {
@@ -151,6 +153,17 @@ export const ChapterPage = () => {
               ))}
             </div>
           </section>
+
+          <CramSection
+            sheet={buildBlockCramSheet({
+              title: chapter.title,
+              examWeight: chapter.examWeight,
+              description: chapter.description,
+              summary: chapter.summary,
+              keyTerms: chapter.keyTerms,
+              sections: chapter.sections,
+            })}
+          />
 
           {test ? (
             <div className="mt-12 rounded-xl border border-line bg-accent-soft/50 p-6 shadow-card">

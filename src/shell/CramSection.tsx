@@ -1,7 +1,13 @@
-import { cramSheets } from './cram'
+import { cramSheets, type CramSheet } from './cram'
 
-export const CramSection = ({ subject }: { subject: string }) => {
-  const sheet = cramSheets[subject]
+export const CramSection = ({
+  subject,
+  sheet: providedSheet,
+}: {
+  subject?: string
+  sheet?: CramSheet
+}) => {
+  const sheet = providedSheet ?? (subject ? cramSheets[subject] : undefined)
   if (!sheet) return null
 
   return (
