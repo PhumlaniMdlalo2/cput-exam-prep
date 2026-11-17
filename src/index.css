@@ -159,6 +159,34 @@ pre {
   border-radius: 999px;
 }
 
+@media (max-width: 1024px) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .grain {
+    background-image: none;
+  }
+
+  .backdrop-blur,
+  .backdrop-blur-sm,
+  .backdrop-blur-md,
+  .backdrop-blur-lg {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .blur-3xl {
+    filter: none !important;
+    opacity: 0.25 !important;
+  }
+
+  .shadow-card,
+  .shadow-float {
+    box-shadow: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
