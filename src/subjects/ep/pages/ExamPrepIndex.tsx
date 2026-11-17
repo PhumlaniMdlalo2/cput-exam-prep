@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { CramSection } from '../../../shell/CramSection'
 import { chapterById } from '../content'
 
 const Stat = ({ label, value, hint }: { label: string; value: string; hint?: string }) => (
@@ -120,6 +121,8 @@ export const ExamPrepIndex = () => {
           ))}
         </div>
         </div>
+
+        <CramSection subject="ep" />
       </div>
     </div>
   )

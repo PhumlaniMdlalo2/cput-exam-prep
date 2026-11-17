@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { CramSection } from '../../shell/CramSection';
 import { useRouter, getRouteParams } from './lib/router';
 import { chapters } from './content/chapters';
 import { chapterTests } from './content/tests';
@@ -247,6 +248,8 @@ const HomeView: React.FC<{ progress: ReturnType<typeof storage.getProgress>; nav
           })}
         </div>
       </section>
+
+      <CramSection subject="pm" />
 
       <section className="mt-14 rounded-xl border border-line bg-surface p-6 shadow-card sm:p-8">
         <h2 className="font-serif text-2xl">How to use this site</h2>
