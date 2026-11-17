@@ -16,7 +16,7 @@ export const chapter11: Chapter = {
       blocks: [
         ul([`In general, software customers expect all software to be dependable. However, for non-critical applications, they may be willing to accept some system failures.`]),
         ul([`Some applications (critical systems) have very high reliability requirements and special software engineering techniques may be used to achieve this.`]),
-        p(`▪ Medical systems ▪ Telecommunications and power systems ▪ Aerospace systems`),
+        ul([`Medical systems`, `Telecommunications and power systems`, `Aerospace systems`]),
       ],
     },
     {
@@ -27,9 +27,9 @@ export const chapter11: Chapter = {
         h(3, `The fault → error → failure chain`, 'the-fault-error-failure-chain'),
         ul([`**Failures** are usually a result of **system errors** that are derived from **faults** in the system.`]),
         ul([`**However, faults do not necessarily result in system errors:**`]),
-        p(`▪ The erroneous system state resulting from the fault may be **transient and 'corrected' before an error arises**. ▪ The **faulty code may never be executed**.`),
+        ul([`The erroneous system state resulting from the fault may be **transient and 'corrected' before an error arises**.`, `The **faulty code may never be executed**.`]),
         ul([`**Errors do not necessarily lead to system failures:**`]),
-        p(`▪ The error can be **corrected by built-in error detection and recovery**. ▪ The failure can be **protected against by built-in protection facilities** — these may, for example, **protect system resources from system errors**.`),
+        ul([`The error can be **corrected by built-in error detection and recovery**.`, `The failure can be **protected against by built-in protection facilities** — these may, for example, **protect system resources from system errors**.`]),
         h(3, `Mapping the three techniques onto the chain`, 'mapping-the-three-techniques-onto-the-chain'),
         table([`Technique`, `Where it acts`, `What it does`], [[`**Fault avoidance**`, `Before faults exist`, `The system is developed so that **human error is avoided** and system faults are minimised. Development is organised so faults are **detected and repaired before delivery**.`], [`**Fault detection and removal**`, `Between fault and deployment`, `**V&V techniques** are used to discover and remove faults **before the system is deployed** — they **increase the probability of detecting and correcting errors before the system goes into service**.`], [`**Fault tolerance**`, `Between error and failure (run-time)`, `**Run-time techniques** ensure that **system faults do not result in system errors** and/or that **system errors do not lead to system failures**.`]]),
       ],
@@ -39,11 +39,11 @@ export const chapter11: Chapter = {
       title: `Reliability achievement`,
       blocks: [
         h(4, `Fault avoidance`, 'fault-avoidance'),
-        p(`▪ Development techniques are used that either **minimise the possibility of mistakes** or **trap mistakes before they result in the introduction of system faults**.`),
+        ul([`Development techniques are used that either **minimise the possibility of mistakes** or **trap mistakes before they result in the introduction of system faults**.`]),
         h(4, `Fault detection and removal`, 'fault-detection-and-removal'),
-        p(`▪ V&V techniques are used that **increase the probability of detecting and correcting errors before the system goes into service**.`),
+        ul([`V&V techniques are used that **increase the probability of detecting and correcting errors before the system goes into service**.`]),
         h(4, `Fault tolerance`, 'fault-tolerance'),
-        p(`▪ Run-time techniques are used to ensure that **system faults do not result in system errors** and/or that **system errors do not lead to system failures**.`),
+        ul([`Run-time techniques are used to ensure that **system faults do not result in system errors** and/or that **system errors do not lead to system failures**.`]),
       ],
     },
     {
@@ -51,9 +51,9 @@ export const chapter11: Chapter = {
       title: `Availability and reliability`,
       blocks: [
         h(4, `Reliability`, 'reliability'),
-        p(`▪ The probability of **failure-free system operation over a specified time in a given environment for a given purpose**.`),
+        ul([`The probability of **failure-free system operation over a specified time in a given environment for a given purpose**.`]),
         h(4, `Availability`, 'availability'),
-        p(`▪ The probability that a system, **at a point in time**, will be **operational and able to deliver the requested services**.`),
+        ul([`The probability that a system, **at a point in time**, will be **operational and able to deliver the requested services**.`]),
         p(`Both of these attributes can be expressed quantitatively — e.g. **availability of 0.999 means the system is up and running for 99.9% of the time**.`),
       ],
     },
@@ -67,7 +67,7 @@ export const chapter11: Chapter = {
         ul([`**Therefore perceived reliability is more important in practice.**`]),
         h(3, `Perceptions of reliability`, 'perceptions-of-reliability'),
         ul([`The formal definition of reliability does not always reflect the user's perception of a system's reliability.`]),
-        p(`▪ **The assumptions made about the environment** where a system will be used may be incorrect — usage in an office environment is likely to be quite different from usage of the same system in a university environment. ▪ **The consequences of system failures** affect the perception of reliability — unreliable windscreen wipers in a car may be irrelevant in a dry climate; failures with serious consequences (such as an engine breakdown) are **given greater weight by users** than failures that are merely inconvenient.`),
+        ul([`**The assumptions made about the environment** where a system will be used may be incorrect — usage in an office environment is likely to be quite different from usage of the same system in a university environment.`, `**The consequences of system failures** affect the perception of reliability — unreliable windscreen wipers in a car may be irrelevant in a dry climate; failures with serious consequences (such as an engine breakdown) are **given greater weight by users** than failures that are merely inconvenient.`]),
       ],
     },
     {
@@ -76,7 +76,7 @@ export const chapter11: Chapter = {
       blocks: [
         ul([`**Removing X% of the faults in a system will not necessarily improve the reliability by X%.**`]),
         ul([`**Why:**`]),
-        p(`▪ Program defects may be in **rarely executed sections of the code**, so may **never be encountered by users** — removing these does **not affect the perceived reliability**. ▪ **Users adapt their behaviour to avoid system features that may fail for them.**`),
+        ul([`Program defects may be in **rarely executed sections of the code**, so may **never be encountered by users** — removing these does **not affect the perceived reliability**.`, `**Users adapt their behaviour to avoid system features that may fail for them.**`]),
         ul([`**Consequence:** a program with **known faults may therefore still be perceived as reliable** by its users.`]),
       ],
     },
@@ -86,7 +86,7 @@ export const chapter11: Chapter = {
       blocks: [
         p(`Availability is usually expressed as a **percentage of the time that the system is available** to deliver services, e.g. 99.95%.`),
         h(4, `However, this does not take into account two factors:`, 'however-this-does-not-take-into-account-two-factors'),
-        p(`▪ **The number of users affected by the service outage.** Loss of service in the middle of the night is **less important** for many systems than loss of service during **peak usage periods**. ▪ **The length of the outage.** The **longer the outage, the more the disruption**. **Several short outages are less likely to be disruptive than one long outage.** **Long repair times are a particular problem.**`),
+        ul([`**The number of users affected by the service outage.** Loss of service in the middle of the night is **less important** for many systems than loss of service during **peak usage periods**.`, `**The length of the outage.** The **longer the outage, the more the disruption**. **Several short outages are less likely to be disruptive than one long outage.** **Long repair times are a particular problem.**`]),
       ],
     },
     {
@@ -111,7 +111,7 @@ export const chapter11: Chapter = {
         ul([`System reliability is measured by **counting the number of operational failures** and, where appropriate, **relating these to the demands made on the system and the time the system has been operational**.`]),
         ul([`**A long-term measurement programme is required** to assess the reliability of critical systems.`]),
         h(4, `Metrics`, 'metrics'),
-        p(`▪ Probability of failure on demand (POFOD) ▪ Rate of occurrence of failures / Mean time to failure (ROCOF / MTTF) ▪ Availability`),
+        ul([`Probability of failure on demand (POFOD)`, `Rate of occurrence of failures / Mean time to failure (ROCOF / MTTF)`, `Availability`]),
       ],
     },
     {
@@ -128,7 +128,7 @@ export const chapter11: Chapter = {
         ul([`**ROCOF of 0.002** means **2 failures are likely in each 1000 operational time units** (e.g. 2 failures per 1000 hours of operation).`]),
         ul([`**Use when:** the system has to **process a large number of similar requests in a short time** — e.g. **credit card processing system, airline booking system**.`]),
         ul([`**Reciprocal is Mean Time To Failure (MTTF):**`]),
-        p(`▪ **Relevant for systems with long transactions** — where system processing takes a long time (e.g. **CAD systems**). **MTTF should be longer than the expected transaction length.**`),
+        ul([`**Relevant for systems with long transactions** — where system processing takes a long time (e.g. **CAD systems**). **MTTF should be longer than the expected transaction length.**`]),
         h(3, `Availability`, 'availability'),
         ul([`Measure of the **fraction of the time the system is available for use**.`]),
         ul([`**Takes repair and restart time into account.**`]),
@@ -169,14 +169,14 @@ export const chapter11: Chapter = {
       title: `ATM reliability specification`,
       blocks: [
         h(3, `Key concerns`, 'key-concerns'),
-        p(`▪ To ensure that ATMs **carry out customer services as requested** and **properly record customer transactions in the account database**. ▪ To ensure that ATM systems are **available for use when required**.`),
+        ul([`To ensure that ATMs **carry out customer services as requested** and **properly record customer transactions in the account database**.`, `To ensure that ATM systems are **available for use when required**.`]),
         p(`**Database transaction mechanisms may be used to correct transaction problems, so a low level of ATM reliability is all that is required. Availability, in this case, is more important than reliability.**`),
         h(3, `ATM availability specification`, 'atm-availability-specification'),
         h(4, `System services`, 'system-services'),
-        p(`▪ The **customer account database service**; ▪ The **individual services provided by an ATM** such as 'withdraw cash', 'provide account information', etc.`),
+        ul([`The **customer account database service**;`, `The **individual services provided by an ATM** such as 'withdraw cash', 'provide account information', etc.`]),
         ul([`**The database service is critical** — failure of this service means **all of the ATMs in the network are out of action**.`]),
         ul([`You should specify this to have a **high level of availability**:`]),
-        p(`▪ **Database availability should be around 0.9999, between 7 am and 11 pm.** ▪ This corresponds to a **downtime of less than 1 minute per week**.`),
+        ul([`**Database availability should be around 0.9999, between 7 am and 11 pm.**`, `This corresponds to a **downtime of less than 1 minute per week**.`]),
         ul([`For an **individual ATM**, the key reliability issues depend on **mechanical reliability** and the fact that it **can run out of cash**.`]),
         ul([`A **lower level of software availability for the ATM software is acceptable**.`]),
         ul([`The overall availability of the ATM software might therefore be specified as **0.999**, which means a machine might be **unavailable for between 1 and 2 minutes each day**.`]),
@@ -198,7 +198,7 @@ export const chapter11: Chapter = {
       blocks: [
         ul([`Fault-tolerant system architectures are used where fault tolerance is essential. These architectures are generally **all based on redundancy and diversity**.`]),
         ul([`Examples of situations where dependable architectures are used:`]),
-        p(`▪ **Flight control systems** — where system failure could threaten the safety of passengers. ▪ **Reactor systems** — where failure of a control system could lead to a chemical or nuclear emergency. ▪ **Telecommunication systems** — where there is a need for **24/7 availability**.`),
+        ul([`**Flight control systems** — where system failure could threaten the safety of passengers.`, `**Reactor systems** — where failure of a control system could lead to a chemical or nuclear emergency.`, `**Telecommunication systems** — where there is a need for **24/7 availability**.`]),
       ],
     },
     {
@@ -206,7 +206,7 @@ export const chapter11: Chapter = {
       title: `Protection systems`,
       blocks: [
         ul([`A **specialised system** that is associated with some other control system, which can take **emergency action if a failure occurs**.`]),
-        p(`▪ System to **stop a train if it passes a red light**. ▪ System to **shut down a reactor if temperature/pressure are too high**.`),
+        ul([`System to **stop a train if it passes a red light**.`, `System to **shut down a reactor if temperature/pressure are too high**.`]),
         ul([`Protection systems **independently monitor the controlled system and the environment**.`]),
         ul([`If a problem is detected, it **issues commands to take emergency action** to shut down the system and **avoid a catastrophe**.`]),
         h(3, `Protection system functionality`, 'protection-system-functionality'),
@@ -257,7 +257,7 @@ export const chapter11: Chapter = {
         ul([`Approaches to software fault tolerance depend on **software diversity**, where it is assumed that **different implementations of the same software specification will fail in different ways**.`]),
         ul([`**Two assumptions:** implementations are **(a) independent** and **(b) do not include common errors**.`]),
         h(4, `Strategies to achieve diversity`, 'strategies-to-achieve-diversity'),
-        p(`▪ **Different programming languages** ▪ **Different design methods and tools** ▪ **Explicit specification of different algorithms**`),
+        ul([`**Different programming languages**`, `**Different design methods and tools**`, `**Explicit specification of different algorithms**`]),
       ],
     },
     {
@@ -296,7 +296,7 @@ export const chapter11: Chapter = {
       blocks: [
         p(`Good programming practices can be adopted that help reduce the incidence of program faults.`),
         h(4, `These programming practices support`, 'these-programming-practices-support'),
-        p(`▪ **Fault avoidance** ▪ **Fault detection** ▪ **Fault tolerance**`),
+        ul([`**Fault avoidance**`, `**Fault detection**`, `**Fault tolerance**`]),
       ],
     },
     {
@@ -331,10 +331,10 @@ export const chapter11: Chapter = {
         ul([`Consequently, many programs **behave unpredictably when presented with unusual inputs**, and sometimes these are **threats to the security of the system**.`]),
         ul([`Therefore you should **always check inputs before processing against the assumptions** made about them.`]),
         h(3, `Validity checks`, 'validity-checks'),
-        p(`**Range checks** ▪ Check that the input falls within a **known range**.`),
-        p(`**Size checks** ▪ Check that the input does **not exceed some maximum size** — e.g. 40 characters for a name.`),
-        p(`**Representation checks** ▪ Check that the input does **not include characters that should not be part of its representation** — e.g. names do not include numerals.`),
-        p(`**Reasonableness checks** ▪ Use information about the input to check if it is **reasonable rather than an extreme value**.`),
+        p(`**Range checks**`), ul([`Check that the input falls within a **known range**.`]),
+        p(`**Size checks**`), ul([`Check that the input does **not exceed some maximum size** — e.g. 40 characters for a name.`]),
+        p(`**Representation checks**`), ul([`Check that the input does **not include characters that should not be part of its representation** — e.g. names do not include numerals.`]),
+        p(`**Reasonableness checks**`), ul([`Use information about the input to check if it is **reasonable rather than an extreme value**.`]),
       ],
     },
     {
@@ -382,7 +382,7 @@ export const chapter11: Chapter = {
         ul([`**Short transactions** (many organizational systems): changes to the database are only **finalized after all other processing has successfully completed**. If something goes wrong, the database is **not updated and does not become inconsistent** — e.g. e-commerce systems, where you only commit to your purchase on the final screen.`]),
         ul([`**Long transactions** (e.g. CAD systems, word processing): the time between starting and finishing may be **minutes or hours**. If the system fails, **all work may be lost**. Similarly in **computationally intensive systems** (e.g. e-science), minutes or hours of processing may be lost.`]),
         ul([`**Restart capability** is based on **keeping copies of data** collected or generated during processing — these copies are sometimes called **checkpoints**:`]),
-        p(`▪ **E-commerce:** keep copies of forms filled in by a user and allow them to **access and submit without refilling**. ▪ **Long/computationally intensive systems:** **automatically save data every few minutes** and, on failure, **restart with the most recently saved data**. Also allow users to **go back to the most recent checkpoint** and start again.`),
+        ul([`**E-commerce:** keep copies of forms filled in by a user and allow them to **access and submit without refilling**.`, `**Long/computationally intensive systems:** **automatically save data every few minutes** and, on failure, **restart with the most recently saved data**. Also allow users to **go back to the most recent checkpoint** and start again.`]),
         ul([`**Backward error recovery:** if an exception occurs and it is impossible to continue normal operation, **reset the state to the saved checkpoint state and restart from that point**.`]),
       ],
     },
@@ -485,9 +485,9 @@ export const chapter11: Chapter = {
     }
   ],
   summary: [
-    p(`▪ Medical systems ▪ Telecommunications and power systems ▪ Aerospace systems`),
-    p(`▪ The erroneous system state resulting from the fault may be **transient and 'corrected' before an error arises**. ▪ The **faulty code may never be executed**.`),
-    p(`▪ Development techniques are used that either **minimise the possibility of mistakes** or **trap mistakes before they result in the introduction of system faults**.`),
+    ul([`Medical systems`, `Telecommunications and power systems`, `Aerospace systems`]),
+    ul([`The erroneous system state resulting from the fault may be **transient and 'corrected' before an error arises**.`, `The **faulty code may never be executed**.`]),
+    ul([`Development techniques are used that either **minimise the possibility of mistakes** or **trap mistakes before they result in the introduction of system faults**.`]),
   ],
   keyTerms: [],
 }

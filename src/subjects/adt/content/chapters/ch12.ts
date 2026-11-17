@@ -31,10 +31,10 @@ export const chapter12: Chapter = {
       title: `Safety and reliability`,
       blocks: [
         ul([`Safety and reliability are **related but distinct**:`]),
-        p(`▪ In general, **reliability and availability are necessary but not sufficient conditions for system safety**.`),
+        ul([`In general, **reliability and availability are necessary but not sufficient conditions for system safety**.`]),
         ul([`**Reliability** is concerned with **conformance to a given specification and delivery of service**.`]),
         ul([`**Safety** is concerned with ensuring the system **cannot cause damage irrespective of whether or not it conforms to its specification**.`]),
-        p(`▪ System reliability is **essential** for safety but is **not enough**. ▪ **Reliable systems can be unsafe.**`),
+        ul([`System reliability is **essential** for safety but is **not enough**.`, `**Reliable systems can be unsafe.**`]),
       ],
     },
     {
@@ -53,7 +53,7 @@ export const chapter12: Chapter = {
       blocks: [
         ul([`Systems where it is **essential that system operation is always safe** i.e. the system should **never cause damage to people or the system's environment**.`]),
         h(4, `Examples`, 'examples'),
-        p(`▪ Control and monitoring systems in aircraft ▪ Process control systems in chemical manufacture ▪ Automobile control systems such as braking and engine management systems`),
+        ul([`Control and monitoring systems in aircraft`, `Process control systems in chemical manufacture`, `Automobile control systems such as braking and engine management systems`]),
       ],
     },
     {
@@ -61,16 +61,16 @@ export const chapter12: Chapter = {
       title: `Safety criticality`,
       blocks: [
         h(4, `Primary safety-critical systems`, 'primary-safety-critical-systems'),
-        p(`▪ Embedded software systems whose **failure can cause the associated hardware to fail and directly threaten people**. Example is the **insulin pump control system**.`),
+        ul([`Embedded software systems whose **failure can cause the associated hardware to fail and directly threaten people**. Example is the **insulin pump control system**.`]),
         h(4, `Secondary safety-critical systems`, 'secondary-safety-critical-systems'),
-        p(`▪ Systems whose **failure results in faults in other (socio-technical) systems**, which can then have safety consequences. • For example, the **Mentcare system** is safety-critical as failure may lead to **inappropriate treatment being prescribed**. • **Infrastructure control systems** are also secondary safety-critical systems.`),
+        ul([`Systems whose **failure results in faults in other (socio-technical) systems**, which can then have safety consequences.`, `For example, the **Mentcare system** is safety-critical as failure may lead to **inappropriate treatment being prescribed**.`, `**Infrastructure control systems** are also secondary safety-critical systems.`]),
       ],
     },
     {
       id: 'hazards',
       title: `Hazards`,
       blocks: [
-        p(`Situations or events that **can lead to an accident** ▪ Stuck valve in reactor control system ▪ Incorrect computation by software in navigation system ▪ Failure to detect possible allergy in medication prescribing system`),
+        p(`Situations or events that **can lead to an accident**`), ul([`Stuck valve in reactor control system`, `Incorrect computation by software in navigation system`, `Failure to detect possible allergy in medication prescribing system`]),
         p(`**Hazards do not inevitably result in accidents – accident prevention actions can be taken.**`),
       ],
     },
@@ -79,11 +79,11 @@ export const chapter12: Chapter = {
       title: `Safety achievement — three strategies`,
       blocks: [
         h(4, `Hazard avoidance`, 'hazard-avoidance'),
-        p(`▪ The system is designed so that **some classes of hazard simply cannot arise**.`),
+        ul([`The system is designed so that **some classes of hazard simply cannot arise**.`]),
         h(4, `Hazard detection and removal`, 'hazard-detection-and-removal'),
-        p(`▪ The system is designed so that **hazards are detected and removed before they result in an accident**.`),
+        ul([`The system is designed so that **hazards are detected and removed before they result in an accident**.`]),
         h(4, `Damage limitation`, 'damage-limitation'),
-        p(`▪ The system includes **protection features that minimise the damage** that may result from an accident.`),
+        ul([`The system includes **protection features that minimise the damage** that may result from an accident.`]),
         p(`_(These are the same three strategies as "Risk reduction strategies" below — see that section.)_`),
       ],
     },
@@ -99,7 +99,7 @@ export const chapter12: Chapter = {
       title: `Normal accidents`,
       blocks: [
         ul([`Accidents in complex systems **rarely have a single cause** as these systems are designed to be **resilient to a single point of failure**.`]),
-        p(`▪ **Designing systems so that a single point of failure does not cause an accident is a fundamental principle of safe systems design.**`),
+        ul([`**Designing systems so that a single point of failure does not cause an accident is a fundamental principle of safe systems design.**`]),
         ul([`**Almost all accidents are a result of combinations of malfunctions rather than single failures.**`]),
         ul([`It is probably the case that **anticipating all problem combinations, especially in software-controlled systems, is impossible** — so **achieving complete safety is impossible**. **Accidents are inevitable.**`]),
       ],
@@ -109,7 +109,7 @@ export const chapter12: Chapter = {
       title: `Software safety benefits`,
       blocks: [
         ul([`Although software failures can be safety-critical, the use of software control systems **contributes to increased system safety**:`]),
-        p(`▪ **Software monitoring and control** allows a **wider range of conditions to be monitored and controlled** than is possible using electro-mechanical safety systems. ▪ **Software control allows safety strategies** that **reduce the amount of time people spend in hazardous environments**. ▪ **Software can detect and correct safety-critical operator errors.**`),
+        ul([`**Software monitoring and control** allows a **wider range of conditions to be monitored and controlled** than is possible using electro-mechanical safety systems.`, `**Software control allows safety strategies** that **reduce the amount of time people spend in hazardous environments**.`, `**Software can detect and correct safety-critical operator errors.**`]),
       ],
     },
     {
@@ -118,7 +118,7 @@ export const chapter12: Chapter = {
       blocks: [
         ul([`The goal of safety requirements engineering is to **identify protection requirements** that ensure that **system failures do not cause injury or death or environmental damage**.`]),
         ul([`Safety requirements may be **'shall not' requirements** i.e. they define **situations and events that should never occur**.`]),
-        p(`**Functional safety requirements define:** ▪ **Checking and recovery features** that should be included in a system ▪ **Features that provide protection** against system failures and external attacks`),
+        p(`**Functional safety requirements define:**`), ul([`**Checking and recovery features** that should be included in a system`, `**Features that provide protection** against system failures and external attacks`]),
       ],
     },
     {
@@ -126,16 +126,16 @@ export const chapter12: Chapter = {
       title: `Hazard-driven analysis`,
       blocks: [
         h(3, `Hazard identification`, 'hazard-identification'),
-        p(`Identify the hazards that may threaten the system. Hazard identification may be based on **different types of hazard**: ▪ Physical hazards ▪ Electrical hazards ▪ Biological hazards ▪ Service failure hazards ▪ Etc.`),
+        p(`Identify the hazards that may threaten the system. Hazard identification may be based on **different types of hazard**:`), ul([`Physical hazards`, `Electrical hazards`, `Biological hazards`, `Service failure hazards`, `Etc.`]),
         h(3, `Hazard assessment`, 'hazard-assessment'),
         p(`Concerned with **understanding the likelihood that a risk will arise and the potential consequences** if an accident or incident should occur.`),
-        p(`**Risks may be categorised as:** ▪ **Intolerable** — must never arise or result in an accident. ▪ **As low as reasonably practical (ALARP)** — must minimise the possibility of risk given cost and schedule constraints. ▪ **Acceptable** — the consequences of the risk are acceptable and no extra costs should be incurred to reduce hazard probability.`),
+        p(`**Risks may be categorised as:**`), ul([`**Intolerable** — must never arise or result in an accident.`, `**As low as reasonably practical (ALARP)** — must minimise the possibility of risk given cost and schedule constraints.`, `**Acceptable** — the consequences of the risk are acceptable and no extra costs should be incurred to reduce hazard probability.`]),
         h(4, `The risk triangle`, 'the-risk-triangle'),
         img('/assets/Pasted image 20260918102511.png', `Pasted image 20260918102511`),
         h(3, `Social acceptability of risk`, 'social-acceptability-of-risk'),
         ul([`The acceptability of a risk is determined by **human, social and political considerations**.`]),
         ul([`In most societies, the **boundaries between the regions are pushed upwards with time** — i.e. **society is less willing to accept risk**.`]),
-        p(`▪ For example, the costs of cleaning up pollution may be less than the costs of preventing it but this may **not be socially acceptable**.`),
+        ul([`For example, the costs of cleaning up pollution may be less than the costs of preventing it but this may **not be socially acceptable**.`]),
         ul([`**Risk assessment is subjective** — risks are identified as probable, unlikely, etc. This **depends on who is making the assessment**.`]),
         h(3, `Hazard assessment — precise estimation`, 'hazard-assessment-precise-estimation'),
         ul([`**Estimate the risk probability and the risk severity.**`]),
@@ -144,7 +144,7 @@ export const chapter12: Chapter = {
         h(3, `Hazard analysis`, 'hazard-analysis'),
         ul([`Concerned with **discovering the root causes of risks** in a particular system.`]),
         ul([`Techniques have been mostly derived from safety-critical systems and can be:`]),
-        p(`▪ **Inductive, bottom-up techniques** — start with a proposed system failure and **assess the hazards that could arise from that failure**. ▪ **Deductive, top-down techniques** — start with a hazard and **deduce what the causes of this could be**.`),
+        ul([`**Inductive, bottom-up techniques** — start with a proposed system failure and **assess the hazards that could arise from that failure**.`, `**Deductive, top-down techniques** — start with a hazard and **deduce what the causes of this could be**.`]),
       ],
     },
     {
@@ -156,8 +156,8 @@ export const chapter12: Chapter = {
         ul([`Where appropriate, link these with **'and' or 'or' conditions**.`]),
         ul([`**A goal should be to minimise the number of single causes of system failure.**`]),
         h(3, `Fault tree analysis — insulin pump`, 'fault-tree-analysis-insulin-pump'),
-        p(`Three possible conditions that can lead to delivery of incorrect dose of insulin: ▪ Incorrect measurement of blood sugar level ▪ Failure of delivery system ▪ Dose delivered at wrong time`),
-        p(`By analysis of the fault tree, **root causes of these hazards related to software are:** ▪ **Algorithm error** ▪ **Arithmetic error**`),
+        p(`Three possible conditions that can lead to delivery of incorrect dose of insulin:`), ul([`Incorrect measurement of blood sugar level`, `Failure of delivery system`, `Dose delivered at wrong time`]),
+        p(`By analysis of the fault tree, **root causes of these hazards related to software are:**`), ul([`**Algorithm error**`, `**Arithmetic error**`]),
       ],
     },
     {
@@ -165,7 +165,7 @@ export const chapter12: Chapter = {
       title: `Risk reduction`,
       blocks: [
         p(`The aim is to **identify dependability requirements that specify how the risks should be managed** and ensure that accidents/incidents do not arise.`),
-        p(`**Risk reduction strategies** ▪ **Hazard avoidance** ▪ **Hazard detection and removal** ▪ **Damage limitation**`),
+        p(`**Risk reduction strategies**`), ul([`**Hazard avoidance**`, `**Hazard detection and removal**`, `**Damage limitation**`]),
         p(`_(These are the same three strategies as "Safety achievement" above.)_`),
         h(3, `Strategy use`, 'strategy-use'),
         ul([`Normally, in critical systems, a **mix of risk reduction strategies** are used.`]),
@@ -177,15 +177,15 @@ export const chapter12: Chapter = {
       id: 'insulin-pump-software-risks',
       title: `Insulin pump — software risks`,
       blocks: [
-        p(`**Arithmetic error** ▪ A computation causes the value of a variable to **overflow or underflow**. ▪ May include an **exception handler** for each type of arithmetic error.`),
-        p(`**Algorithmic error** ▪ **Compare dose to be delivered with previous dose or safe maximum doses.** Reduce dose if too high.`),
+        p(`**Arithmetic error**`), ul([`A computation causes the value of a variable to **overflow or underflow**.`, `May include an **exception handler** for each type of arithmetic error.`]),
+        p(`**Algorithmic error**`), ul([`**Compare dose to be delivered with previous dose or safe maximum doses.** Reduce dose if too high.`]),
       ],
     },
     {
       id: 'safety-engineering-processes',
       title: `Safety engineering processes`,
       blocks: [
-        p(`Safety engineering processes are based on reliability engineering processes: ▪ **Plan-based approach with reviews and checks at each stage** in the process. ▪ **General goal of fault avoidance and fault detection.** ▪ Must also include **safety reviews and explicit identification and tracking of hazards**.`),
+        p(`Safety engineering processes are based on reliability engineering processes:`), ul([`**Plan-based approach with reviews and checks at each stage** in the process.`, `**General goal of fault avoidance and fault detection.**`, `Must also include **safety reviews and explicit identification and tracking of hazards**.`]),
       ],
     },
     {
@@ -199,7 +199,7 @@ export const chapter12: Chapter = {
         ul([`This evidence is **collected during the systems development process** and may include: information about **hazard analysis and mitigation, test results, static analyses, information about the development processes used, records of review meetings**, and so on. It is **assembled and organised into a safety case** — a **detailed presentation of why the system owners and developers believe that a system is safe**.`]),
         h(3, `Regulation — evidence regulators may require`, 'regulation-evidence-regulators-may-require'),
         h(4, `For example:`, 'for-example'),
-        p(`▪ The **specification of the system** that has been developed and **records of the checks made on that specification**. ▪ **Evidence of the verification and validation processes** that have been carried out and the **results of system verification and validation**. ▪ Evidence that the organisations developing the system have **defined and dependable software processes** that include **safety assurance reviews**. There must also be **records that show these processes have been properly enacted**.`),
+        ul([`The **specification of the system** that has been developed and **records of the checks made on that specification**.`, `**Evidence of the verification and validation processes** that have been carried out and the **results of system verification and validation**.`, `Evidence that the organisations developing the system have **defined and dependable software processes** that include **safety assurance reviews**. There must also be **records that show these processes have been properly enacted**.`]),
       ],
     },
     {
@@ -207,7 +207,7 @@ export const chapter12: Chapter = {
       title: `Agile methods and safety`,
       blocks: [
         ul([`Agile methods are **not usually used for safety-critical systems engineering**:`]),
-        p(`▪ **Extensive process and product documentation** is needed for system regulation. **Contradicts the focus in agile methods on the software itself.** ▪ A **detailed safety analysis of a complete system specification** is important. **Contradicts the interleaved development of a system specification and program.**`),
+        ul([`**Extensive process and product documentation** is needed for system regulation. **Contradicts the focus in agile methods on the software itself.**`, `A **detailed safety analysis of a complete system specification** is important. **Contradicts the interleaved development of a system specification and program.**`]),
         ul([`Some agile techniques such as **test-driven development may be used**.`]),
       ],
     },
@@ -216,13 +216,13 @@ export const chapter12: Chapter = {
       title: `Safety assurance processes`,
       blocks: [
         ul([`**Process assurance** involves **defining a dependable process and ensuring that this process is followed** during system development.`]),
-        p(`**Process assurance focuses on:** ▪ **Do we have the right processes** Are the processes appropriate for the level of dependability required Should include **requirements management, change management, reviews and inspections**, etc. ▪ **Are we doing the processes right** Have these processes been **followed by the development team**`),
+        p(`**Process assurance focuses on:**`), ul([`**Do we have the right processes** Are the processes appropriate for the level of dependability required Should include **requirements management, change management, reviews and inspections**, etc.`, `**Are we doing the processes right** Have these processes been **followed by the development team**`]),
         ul([`**Process assurance generates documentation** — agile processes are therefore **rarely used for critical systems**.`]),
         h(3, `Why process assurance matters`, 'why-process-assurance-matters'),
         ul([`**Accidents are rare events, so testing may not find all problems.**`]),
         ul([`**Safety requirements are sometimes 'shall not' requirements, so cannot be demonstrated through testing.**`]),
         ul([`**Safety assurance activities** may be included in the software process that **record the analyses that have been carried out and the people responsible for these**.`]),
-        p(`▪ **Personal responsibility is important** as system failures may lead to **subsequent legal actions**.`),
+        ul([`**Personal responsibility is important** as system failures may lead to **subsequent legal actions**.`]),
         h(3, `Safety related process activities`, 'safety-related-process-activities'),
         ul([`Creation of a **hazard logging and monitoring system**.`]),
         ul([`Appointment of **project safety engineers** who have **explicit responsibility for system safety**.`]),
@@ -244,7 +244,7 @@ export const chapter12: Chapter = {
       blocks: [
         ul([`Formal methods can be used when a **mathematical specification of the system** is produced.`]),
         ul([`They are the **ultimate static verification technique** that may be used at different stages in the development process:`]),
-        p(`▪ A **formal specification** may be developed and **mathematically analysed for consistency** — this helps **discover specification errors and omissions**. ▪ **Formal arguments that a program conforms to its mathematical specification** may be developed — this is effective in **discovering programming and design errors**.`),
+        ul([`A **formal specification** may be developed and **mathematically analysed for consistency** — this helps **discover specification errors and omissions**.`, `**Formal arguments that a program conforms to its mathematical specification** may be developed — this is effective in **discovering programming and design errors**.`]),
         h(3, `Arguments for formal methods`, 'arguments-for-formal-methods'),
         ul([`Producing a mathematical specification **requires a detailed analysis of the requirements** and this is likely to **uncover errors**.`]),
         ul([`**Concurrent systems can be analysed to discover race conditions** that might lead to **deadlock**. **Testing for such problems is very difficult.**`]),
@@ -308,14 +308,14 @@ export const chapter12: Chapter = {
         ul([`They are normally **required by regulators before a system can be certified** for operational use. The **regulator's responsibility is to check that a system is as safe or dependable as is practical**.`]),
         ul([`**Regulators and developers work together and negotiate what needs to be included** in a system safety/dependability case.`]),
         ul([`A safety case is:`]),
-        p(`▪ A **documented body of evidence** that provides a **convincing and valid argument that a system is adequately safe for a given application in a given environment**.`),
+        ul([`A **documented body of evidence** that provides a **convincing and valid argument that a system is adequately safe for a given application in a given environment**.`]),
         h(3, `Bishop and Bloomfield (1998) definition`, 'bishop-and-bloomfield-1998-definition'),
         p(`> _"A documented body of evidence that provides a convincing and valid argument that a system is adequately safe for a given application in a given environment."_`),
         h(3, `Arguments in a safety case`, 'arguments-in-a-safety-case'),
         ul([`Arguments in a safety case can be based on **formal proof, design rationale, safety proofs**, etc. **Process factors may also be included.**`]),
         ul([`A **software safety case is usually part of a wider system safety case** that takes **hardware and operational issues** into account.`]),
         ul([`**Organisation and contents depend on the type of system and its context of operation.** **There are no universal industrial standards** in this area — structures vary by industry and domain maturity.`]),
-        p(`▪ **Nuclear safety cases** have been required for many years — very **comprehensive**, presented in a way familiar to nuclear engineers. ▪ **Medical device safety cases** were introduced **more recently** — the structure is **more flexible** and the cases **less detailed**.`),
+        ul([`**Nuclear safety cases** have been required for many years — very **comprehensive**, presented in a way familiar to nuclear engineers.`, `**Medical device safety cases** were introduced **more recently** — the structure is **more flexible** and the cases **less detailed**.`]),
         ul([`A safety case refers to the **system as a whole**; as part of that case there may be a **subsidiary software safety case**. When constructing a software safety case you have to **relate software failures to wider system failures** and demonstrate either that **these software failures will not occur** or that **they will not be propagated in such a way that dangerous system failures may occur**.`]),
         h(3, `Contents of a software safety case (Figure 12.10)`, 'contents-of-a-software-safety-case-figure-12-10'),
         table([`Chapter`, `Description`], [[`**System description**`, `An overview of the system and a description of its critical components.`], [`**Safety requirements**`, `The safety requirements abstracted from the system requirements specification. Details of other relevant system requirements may also be included.`], [`**Hazard and risk analysis**`, `Documents describing the hazards and risks that have been identified and the measures taken to reduce risk. Hazard analyses and hazard logs.`], [`**Design analysis**`, `A set of structured arguments that justify why the design is safe.`], [`**Verification and validation**`, `A description of the V & V procedures used and, where appropriate, the test plans. Summaries of the test results showing defects detected and corrected. If formal methods have been used, a formal system specification and any analyses of that specification. Records of static analyses of the source code.`], [`**Review reports**`, `Records of all design and safety reviews.`], [`**Team competences**`, `Evidence of the competence of all of the team involved in safety-related systems development and validation.`], [`**Process QA**`, `Records of the quality assurance processes carried out during system development.`], [`**Change management processes**`, `Records of all changes proposed, actions taken and, where appropriate, justification of the safety of these changes. Information about configuration management procedures and configuration management logs.`], [`**Associated safety cases**`, `References to other safety cases that may impact the safety case.`]]),
@@ -420,7 +420,7 @@ export const chapter12: Chapter = {
     }
   ],
   summary: [
-    p(`▪ In general, **reliability and availability are necessary but not sufficient conditions for system safety**.`),
+    ul([`In general, **reliability and availability are necessary but not sufficient conditions for system safety**.`]),
   ],
   keyTerms: [],
 }

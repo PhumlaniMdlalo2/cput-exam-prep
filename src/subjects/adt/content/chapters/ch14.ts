@@ -67,7 +67,7 @@ export const chapter14: Chapter = {
       blocks: [
         ul([`**Cybercrime** is the illegal use of networked systems and is **one of the most serious problems facing our society**.`]),
         ul([`**Cybersecurity is a broader topic than system security engineering**:`]),
-        p(`▪ Cybersecurity is a **sociotechnical issue** covering **all aspects of ensuring the protection of citizens, businesses and critical infrastructures** from threats that arise from their use of computers and the Internet.`),
+        ul([`Cybersecurity is a **sociotechnical issue** covering **all aspects of ensuring the protection of citizens, businesses and critical infrastructures** from threats that arise from their use of computers and the Internet.`]),
         ul([`Cybersecurity is concerned with **all of an organization's IT assets from networks through to application systems**.`]),
       ],
     },
@@ -100,7 +100,7 @@ export const chapter14: Chapter = {
         ul([`**Authentication** — where users of a system have to **show that they are authorized to access the system**.`]),
         ul([`**Encryption** — where data is **algorithmically scrambled** so that an **unauthorized reader cannot access the information**.`]),
         ul([`**Firewalls** — where **incoming network packets are examined then accepted or rejected** according to a set of organizational rules.`]),
-        p(`▪ Firewalls can be used to ensure that **only traffic from trusted sources is passed from the external Internet into the local organizational network**.`),
+        ul([`Firewalls can be used to ensure that **only traffic from trusted sources is passed from the external Internet into the local organizational network**.`]),
       ],
     },
     {
@@ -108,9 +108,9 @@ export const chapter14: Chapter = {
       title: `Redundancy and diversity`,
       blocks: [
         ul([`**Copies of data and software should be maintained on separate computer systems.**`]),
-        p(`▪ This supports **recovery after a successful cyberattack** (recovery and reinstatement).`),
+        ul([`This supports **recovery after a successful cyberattack** (recovery and reinstatement).`]),
         ul([`**Multi-stage diverse authentication** can protect against password attacks.`]),
-        p(`▪ This is a **resistance measure**.`),
+        ul([`This is a **resistance measure**.`]),
         ul([`**Critical servers may be over-provisioned** i.e. they may be **more powerful than is required** to handle their expected load. **Attacks can be resisted without serious service degradation.**`]),
       ],
     },
@@ -156,15 +156,15 @@ export const chapter14: Chapter = {
       title: `Organizational resilience`,
       blocks: [
         ul([`There are **four characteristics** that reflect the resilience of an organization:`]),
-        p(`▪ **Responsiveness, monitoring, anticipation, learning.**`),
+        ul([`**Responsiveness, monitoring, anticipation, learning.**`]),
         h(3, `The ability to respond`, 'the-ability-to-respond'),
-        p(`▪ Organizations have to be able to **adapt their processes and procedures in response to risks**. These risks may be **anticipated risks** or may be **detected threats** to the organization and its systems.`),
+        ul([`Organizations have to be able to **adapt their processes and procedures in response to risks**. These risks may be **anticipated risks** or may be **detected threats** to the organization and its systems.`]),
         h(3, `The ability to monitor`, 'the-ability-to-monitor'),
-        p(`▪ Organizations should **monitor both their internal operations and their external environment for threats before they arise**.`),
+        ul([`Organizations should **monitor both their internal operations and their external environment for threats before they arise**.`]),
         h(3, `The ability to anticipate`, 'the-ability-to-anticipate'),
-        p(`▪ A resilient organization should **not simply focus on its current operations** but should **anticipate possible future events and changes** that may affect its operations and resilience.`),
+        ul([`A resilient organization should **not simply focus on its current operations** but should **anticipate possible future events and changes** that may affect its operations and resilience.`]),
         h(3, `The ability to learn`, 'the-ability-to-learn'),
-        p(`▪ Organizational resilience can be **improved by learning from experience**. It is particularly important to **learn from successful responses to adverse events** such as the **effective resistance of a cyberattack**. **Learning from success allows**...`),
+        ul([`Organizational resilience can be **improved by learning from experience**. It is particularly important to **learn from successful responses to adverse events** such as the **effective resistance of a cyberattack**. **Learning from success allows**...`]),
       ],
     },
     {
@@ -173,7 +173,7 @@ export const chapter14: Chapter = {
       blocks: [
         ul([`People inevitably make mistakes (**human errors**) that sometimes lead to **serious system failures**.`]),
         h(4, `There are two ways to consider human error`, 'there-are-two-ways-to-consider-human-error'),
-        p(`▪ **The person approach.** Errors are considered to be the **responsibility of the individual** and **'unsafe acts'** (such as an operator failing to engage a safety barrier) are a consequence of **individual carelessness or reckless behaviour**. ▪ **The systems approach.** The basic assumption is that **people are fallible and will make mistakes**. People make mistakes because they are under **pressure from high workloads, poor training or because of inappropriate system design**.`),
+        ul([`**The person approach.** Errors are considered to be the **responsibility of the individual** and **'unsafe acts'** (such as an operator failing to engage a safety barrier) are a consequence of **individual carelessness or reckless behaviour**.`, `**The systems approach.** The basic assumption is that **people are fallible and will make mistakes**. People make mistakes because they are under **pressure from high workloads, poor training or because of inappropriate system design**.`]),
       ],
     },
     {
@@ -191,15 +191,15 @@ export const chapter14: Chapter = {
       blocks: [
         p(`You should use **redundancy and diversity** to create a **set of defensive layers**, where **each layer uses a different approach to deter attackers or trap technical/human failures**.`),
         h(4, `ATC system examples`, 'atc-system-examples'),
-        p(`▪ Conflict alert system ▪ Formalized recording procedures ▪ Collaborative checking`),
+        ul([`Conflict alert system`, `Formalized recording procedures`, `Collaborative checking`]),
       ],
     },
     {
       id: 'swiss-cheese-model',
       title: `Swiss Cheese model`,
       blocks: [
-        p(`**Defensive layers have vulnerabilities** ▪ They are like **slices of Swiss cheese with holes** in the layer corresponding to these vulnerabilities.`),
-        p(`**Vulnerabilities are dynamic** ▪ The **'holes' are not always in the same place** and the **size of the holes may vary** depending on the operating conditions.`),
+        p(`**Defensive layers have vulnerabilities**`), ul([`They are like **slices of Swiss cheese with holes** in the layer corresponding to these vulnerabilities.`]),
+        p(`**Vulnerabilities are dynamic**`), ul([`The **'holes' are not always in the same place** and the **size of the holes may vary** depending on the operating conditions.`]),
         p(`**System failures occur when the holes line up and all of the defenses fail.**`),
       ],
     },
@@ -209,11 +209,11 @@ export const chapter14: Chapter = {
       blocks: [
         ul([`**Reduce the probability of the occurrence of an external event** that might trigger system failures.`]),
         ul([`**Increase the number of defensive layers.**`]),
-        p(`▪ The more layers that you have in a system, the **less likely it is that the holes will line up** and a system failure occur.`),
+        ul([`The more layers that you have in a system, the **less likely it is that the holes will line up** and a system failure occur.`]),
         ul([`**Design a system so that diverse types of barriers are included.**`]),
-        p(`▪ The **'holes' will probably be in different places** and so there is **less chance of the holes lining up** and failing to trap an error.`),
+        ul([`The **'holes' will probably be in different places** and so there is **less chance of the holes lining up** and failing to trap an error.`]),
         ul([`**Minimize the number of latent conditions in a system.**`]),
-        p(`▪ This means **reducing the number and size of system 'holes'**.`),
+        ul([`This means **reducing the number and size of system 'holes'**.`]),
       ],
     },
     {
@@ -361,8 +361,8 @@ export const chapter14: Chapter = {
       id: 'maintaining-critical-service-availability',
       title: `Maintaining critical service availability`,
       blocks: [
-        p(`Maintaining the availability of critical services is the **essence of resilience**. Accordingly, you have to know: ▪ **the system services that are the most critical for a business**, ▪ **the minimal quality of service that must be maintained**, ▪ **how these services might be compromised**, ▪ **how these services can be protected**, and ▪ **how you can recover quickly if the services become unavailable**.`),
-        p(`**Critical assets** are identified during service analysis: ▪ Assets may be **hardware, software, data or people**.`),
+        p(`Maintaining the availability of critical services is the **essence of resilience**. Accordingly, you have to know:`), ul([`**the system services that are the most critical for a business**,`, `**the minimal quality of service that must be maintained**,`, `**how these services might be compromised**,`, `**how these services can be protected**, and`, `**how you can recover quickly if the services become unavailable**.`]),
+        p(`**Critical assets** are identified during service analysis:`), ul([`Assets may be **hardware, software, data or people**.`]),
         ul([`To build a resilient system, you have to think about **how to use redundancy and diversity** to ensure these assets **remain available in the event of a system failure**.`]),
         p(`**The key to providing a rapid response and recovery plan** after an adverse event is to have **additional software that supports resistance, recovery, and reinstatement**. This may be **commercial security software** or **resilience support programmed into application systems**. It may also include **scripts and specially written programs** developed for recovery and reinstatement. **If you have the right support software, the processes of recovery and reinstatement can be partially automated and quickly invoked and executed** after a system failure.`),
       ],
