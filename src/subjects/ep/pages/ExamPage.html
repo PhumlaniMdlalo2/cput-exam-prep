@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam Prep — EP</title>
+  <script src="/assets/quiz-engine.js" defer></script>
+  <link rel="stylesheet" href="/assets/quiz-engine.css">
+</head>
+<body data-mode="exam">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/exam-prep">Exam Prep <span>Study System</span></a>
+      <span class="spacer"></span>
+      <a class="back" href="/exam-prep/chapters">Chapters</a>
+      <a class="back" href="/exam-prep">All chapters</a>
+    </div>
+  </div>
+
+  <main class="wrap" id="app">
+    <section class="hero">
+      <p class="kicker" id="kicker">Full simulation</p>
+      <h1 id="title">Loading…</h1>
+      <p class="lede" id="lede"></p>
+      <div class="exam-bar"></div>
+      <div class="instructions">
+        <strong>Instructions</strong>
+        <ol>
+          <li>Answer ALL questions.</li>
+          <li>Section One: write TRUE or FALSE.</li>
+          <li>Section Two: write the missing word(s).</li>
+          <li>Section Three: choose the ONE correct option (A, B, C or D).</li>
+          <li>Do not submit until you have answered everything you can. The timer marks the paper automatically at zero.</li>
+        </ol>
+        <p style="margin: 10px 0 0;">Other papers: <a href="/exam-prep/exam/a">Mock Exam A</a> | <a href="/exam-prep/exam/b">Mock Exam B</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site wrap">
+    <div id="summary"></div>
+    <p class="small text-muted">Exam Prep generated from chapter questions · 2 marks per question</p>
+  </footer>
+</body>
+</html>

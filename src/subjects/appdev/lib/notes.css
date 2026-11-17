@@ -1,0 +1,165 @@
+.appdev-note {
+  max-width: 74ch;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgb(var(--ink) / 0.9);
+}
+
+.appdev-note > *:first-child {
+  margin-top: 0;
+}
+
+.appdev-note h1,
+.appdev-note h2,
+.appdev-note h3,
+.appdev-note h4,
+.appdev-note h5,
+.appdev-note h6 {
+  font-family: 'Newsreader', Georgia, Cambria, serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: rgb(var(--ink));
+  margin: 2rem 0 0.75rem;
+}
+
+.appdev-note h1 {
+  font-size: 2rem;
+}
+
+.appdev-note h2 {
+  font-size: 1.55rem;
+}
+
+.appdev-note h3 {
+  font-size: 1.25rem;
+}
+
+.appdev-note h4,
+.appdev-note h5,
+.appdev-note h6 {
+  font-size: 1.05rem;
+}
+
+.appdev-note p {
+  margin: 0.85rem 0;
+}
+
+.appdev-note ul,
+.appdev-note ol {
+  margin: 0.85rem 0;
+  padding-left: 1.4rem;
+}
+
+.appdev-note ul {
+  list-style: disc;
+}
+
+.appdev-note ol {
+  list-style: decimal;
+}
+
+.appdev-note li {
+  margin: 0.35rem 0;
+}
+
+.appdev-note li::marker {
+  color: rgb(var(--faint));
+}
+
+.appdev-note a {
+  color: rgb(var(--accent-strong));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.appdev-note strong {
+  font-weight: 600;
+  color: rgb(var(--ink));
+}
+
+.appdev-note blockquote {
+  margin: 1.1rem 0;
+  border-left: 3px solid rgb(var(--accent) / 0.5);
+  background: rgb(var(--accent-soft) / 0.45);
+  padding: 0.75rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: rgb(var(--ink) / 0.85);
+}
+
+.appdev-note blockquote > *:first-child {
+  margin-top: 0;
+}
+
+.appdev-note blockquote > *:last-child {
+  margin-bottom: 0;
+}
+
+.appdev-note code {
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  font-size: 0.85em;
+  background: rgb(var(--line) / 0.35);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.3rem;
+}
+
+.appdev-note pre {
+  margin: 1rem 0;
+  overflow-x: auto;
+  border: 1px solid rgb(var(--line));
+  background: rgb(var(--surface));
+  border-radius: 0.75rem;
+  padding: 1rem 1.15rem;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.appdev-note pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.appdev-note hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid rgb(var(--line));
+}
+
+.appdev-note table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.appdev-note th,
+.appdev-note td {
+  border: 1px solid rgb(var(--line));
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.appdev-note th {
+  background: rgb(var(--surface));
+  font-weight: 600;
+}
+
+.appdev-note .note-figure {
+  margin: 1.25rem 0;
+}
+
+.appdev-note .note-figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid rgb(var(--line));
+  border-radius: 0.75rem;
+  background: rgb(var(--surface));
+}
+
+.appdev-note .wikilink {
+  color: rgb(var(--accent-strong));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
