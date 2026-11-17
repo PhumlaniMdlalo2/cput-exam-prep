@@ -35,7 +35,7 @@ const ChapterDetailView: React.FC<{ id: string; navigate: (route: string) => voi
       <button
         type="button"
         onClick={() => navigate('chapters')}
-        className="text-sm font-medium text-muted transition-colors hover:text-accent-strong"
+        className="-ml-2 inline-flex min-h-11 items-center rounded-md px-2 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-accent-strong"
       >
         ← All chapters
       </button>
@@ -58,7 +58,7 @@ const ChapterDetailView: React.FC<{ id: string; navigate: (route: string) => voi
             <button
               type="button"
               onClick={() => navigate(`test/${test.id}`)}
-              className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-canvas transition-colors hover:bg-accent-strong"
+              className="inline-flex min-h-11 items-center rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-canvas transition-colors hover:bg-accent-strong"
             >
               Take the chapter test
             </button>
@@ -93,7 +93,7 @@ const ChapterDetailView: React.FC<{ id: string; navigate: (route: string) => voi
                 <li key={section.id}>
                   <a
                     href={`#${section.id}`}
-                    className="flex gap-2 rounded px-1 py-1 text-muted transition-colors hover:text-accent-strong"
+                    className="flex min-h-11 items-center gap-2 rounded-lg px-2.5 py-2 text-sm text-muted transition-colors hover:bg-canvas hover:text-accent-strong"
                   >
                     <span className="font-mono text-[0.7rem] text-faint">
                       {String(index + 1).padStart(2, '0')}
@@ -105,7 +105,7 @@ const ChapterDetailView: React.FC<{ id: string; navigate: (route: string) => voi
               <li className="pt-1">
                 <a
                   href="#summary"
-                  className="block rounded px-1 py-1 text-muted transition-colors hover:text-accent-strong"
+                  className="flex min-h-11 items-center rounded-lg px-2.5 py-2 text-sm text-muted transition-colors hover:bg-canvas hover:text-accent-strong"
                 >
                   Chapter summary
                 </a>
@@ -113,7 +113,7 @@ const ChapterDetailView: React.FC<{ id: string; navigate: (route: string) => voi
               <li>
                 <a
                   href="#quick-reference"
-                  className="block rounded px-1 py-1 text-muted transition-colors hover:text-accent-strong"
+                  className="flex min-h-11 items-center rounded-lg px-2.5 py-2 text-sm text-muted transition-colors hover:bg-canvas hover:text-accent-strong"
                 >
                   Quick reference
                 </a>

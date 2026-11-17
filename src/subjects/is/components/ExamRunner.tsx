@@ -244,10 +244,10 @@ export const ExamRunner = ({
             >
               Begin attempt
             </button>
-            <Link
-              to={backTo}
-              className="rounded-md border border-line px-5 py-2.5 text-sm font-medium text-muted transition-colors hover:border-accent/40 hover:text-ink"
-            >
+        <Link
+          to={backTo}
+          className="-ml-2 inline-flex min-h-11 items-center rounded-md px-2 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-accent-strong"
+        >
               Not now
             </Link>
           </div>
@@ -283,7 +283,7 @@ export const ExamRunner = ({
           <button
             type="button"
             onClick={() => setShowConfirm(true)}
-            className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-canvas transition-colors hover:bg-accent-strong"
+            className="inline-flex min-h-11 items-center rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-canvas transition-colors hover:bg-accent-strong"
           >
             Submit
           </button>
@@ -326,7 +326,7 @@ export const ExamRunner = ({
                             type="button"
                             onClick={() => setCurrentIndex(index)}
                             className={cn(
-                              'flex h-8 min-w-8 items-center justify-center rounded border px-1 font-mono text-xs transition-colors duration-150',
+                              'flex h-11 min-w-11 items-center justify-center rounded-lg border px-1 font-mono text-sm transition-colors duration-150',
                               index === currentIndex
                                 ? 'border-accent bg-accent text-canvas'
                                 : answered

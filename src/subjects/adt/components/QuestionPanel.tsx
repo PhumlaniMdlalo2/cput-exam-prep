@@ -49,7 +49,7 @@ export const QuestionPanel = ({
             type="button"
             onClick={onToggleFlag}
             className={cn(
-              'ml-auto rounded-md border px-3 py-1.5 text-xs font-medium transition-colors duration-200',
+              'ml-auto inline-flex min-h-11 items-center rounded-md border px-3 py-2 text-sm font-medium transition-colors duration-200',
               flagged
                 ? 'border-gold bg-gold-soft text-gold'
                 : 'border-line text-muted hover:border-gold/50 hover:text-gold',

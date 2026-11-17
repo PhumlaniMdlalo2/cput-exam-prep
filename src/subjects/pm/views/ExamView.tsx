@@ -276,7 +276,7 @@ const ExamView: React.FC<{ examId: string; type: 'mock' | 'test' }> = ({ examId,
           <button
             type="button"
             onClick={() => setShowConfirm(true)}
-            className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-canvas transition-colors hover:bg-accent-strong"
+            className="inline-flex min-h-11 items-center rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-canvas transition-colors hover:bg-accent-strong"
           >
             Submit
           </button>
@@ -592,8 +592,8 @@ export const ResultsView: React.FC<{ examId: string; type: 'mock' | 'test' }> = 
     <div>
       <button
         type="button"
-        onClick={() => navigate('exams')}
-        className="text-sm font-medium text-muted transition-colors hover:text-accent-strong"
+          onClick={() => navigate('exams')}
+          className="-ml-2 inline-flex min-h-11 items-center rounded-md px-2 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-accent-strong"
       >
         ← All exams
       </button>

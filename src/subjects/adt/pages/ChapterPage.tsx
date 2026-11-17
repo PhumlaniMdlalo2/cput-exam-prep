@@ -43,7 +43,7 @@ export const ChapterPage = () => {
     <div>
       <Link
         to="/adt/chapters"
-        className="text-sm font-medium text-muted transition-colors hover:text-accent-strong"
+        className="-ml-2 inline-flex min-h-11 items-center rounded-md px-2 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-accent-strong"
       >
         ← All chapters
       </Link>
@@ -65,7 +65,7 @@ export const ChapterPage = () => {
           {test ? (
             <Link
               to={`/adt/test/${chapter.id}`}
-              className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-canvas transition-colors hover:bg-accent-strong"
+              className="inline-flex min-h-11 items-center rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-canvas transition-colors hover:bg-accent-strong"
             >
               Take the chapter test
             </Link>
@@ -74,7 +74,7 @@ export const ChapterPage = () => {
             type="button"
             onClick={toggleStudied}
             className={cn(
-              'rounded-md border px-4 py-2 text-sm font-medium transition-colors',
+              'inline-flex min-h-11 items-center rounded-md border px-4 py-2.5 text-sm font-medium transition-colors',
               studied
                 ? 'border-success/50 bg-success-soft text-success'
                 : 'border-line text-muted hover:border-accent/40 hover:text-ink',
@@ -99,7 +99,7 @@ export const ChapterPage = () => {
                 <li key={section.id}>
                   <a
                     href={`#${section.id}`}
-                    className="flex gap-2 rounded px-1 py-1 text-muted transition-colors hover:text-accent-strong"
+                    className="flex min-h-11 items-center gap-2 rounded-lg px-2.5 py-2 text-sm text-muted transition-colors hover:bg-canvas hover:text-accent-strong"
                   >
                     <span className="font-mono text-[0.7rem] text-faint">
                       {String(index + 1).padStart(2, '0')}
@@ -109,12 +109,12 @@ export const ChapterPage = () => {
                 </li>
               ))}
               <li className="pt-1">
-                <a href="#summary" className="block rounded px-1 py-1 text-muted hover:text-accent-strong">
+                <a href="#summary" className="flex min-h-11 items-center rounded-lg px-2.5 py-2 text-sm text-muted transition-colors hover:bg-canvas hover:text-accent-strong">
                   Chapter summary
                 </a>
               </li>
               <li>
-                <a href="#key-terms" className="block rounded px-1 py-1 text-muted hover:text-accent-strong">
+                <a href="#key-terms" className="flex min-h-11 items-center rounded-lg px-2.5 py-2 text-sm text-muted transition-colors hover:bg-canvas hover:text-accent-strong">
                   Key terms
                 </a>
               </li>
