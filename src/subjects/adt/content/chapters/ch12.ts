@@ -165,7 +165,7 @@ export const chapter12: Chapter = {
       title: `Risk reduction`,
       blocks: [
         p(`The aim is to **identify dependability requirements that specify how the risks should be managed** and ensure that accidents/incidents do not arise.`),
-        p(`**Risk reduction strategies**`), ul([`**Hazard avoidance**`, `**Hazard detection and removal**`, `**Damage limitation**`]),
+        h(4, `Risk reduction strategies`, 'risk-reduction-strategies'), ul([`**Hazard avoidance**`, `**Hazard detection and removal**`, `**Damage limitation**`]),
         p(`_(These are the same three strategies as "Safety achievement" above.)_`),
         h(3, `Strategy use`, 'strategy-use'),
         ul([`Normally, in critical systems, a **mix of risk reduction strategies** are used.`]),
@@ -177,8 +177,8 @@ export const chapter12: Chapter = {
       id: 'insulin-pump-software-risks',
       title: `Insulin pump — software risks`,
       blocks: [
-        p(`**Arithmetic error**`), ul([`A computation causes the value of a variable to **overflow or underflow**.`, `May include an **exception handler** for each type of arithmetic error.`]),
-        p(`**Algorithmic error**`), ul([`**Compare dose to be delivered with previous dose or safe maximum doses.** Reduce dose if too high.`]),
+        h(4, `Arithmetic error`, 'arithmetic-error'), ul([`A computation causes the value of a variable to **overflow or underflow**.`, `May include an **exception handler** for each type of arithmetic error.`]),
+        h(4, `Algorithmic error`, 'algorithmic-error'), ul([`**Compare dose to be delivered with previous dose or safe maximum doses.** Reduce dose if too high.`]),
       ],
     },
     {

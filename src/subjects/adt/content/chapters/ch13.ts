@@ -344,8 +344,8 @@ export const chapter13: Chapter = {
       title: `Architectural design`,
       blocks: [
         h(4, `Two fundamental issues have to be considered when designing an architecture for security.`, 'two-fundamental-issues-have-to-be-considered-when-designing-'),
-        p(`**Protection**`), ul([`How should the system be organised so that **critical assets can be protected against external attack**`]),
-        p(`**Distribution**`), ul([`How should system assets be distributed so that the **effects of a successful attack are minimized**`]),
+        h(4, `Protection`, 'protection'), ul([`How should the system be organised so that **critical assets can be protected against external attack**`]),
+        h(4, `Distribution`, 'distribution'), ul([`How should system assets be distributed so that the **effects of a successful attack are minimized**`]),
         h(4, `These are potentially conflicting`, 'these-are-potentially-conflicting'),
         ul([`If assets are **distributed**, then they are **more expensive to protect**. If assets are **protected**, then **usability and performance requirements may be compromised**.`]),
       ],
@@ -387,9 +387,9 @@ export const chapter13: Chapter = {
       id: 'design-guidelines-1-3',
       title: `Design guidelines 1–3`,
       blocks: [
-        p(`**1. Base decisions on an explicit security policy**`), ul([`Define a security policy for the organization that sets out the **fundamental security requirements** that should apply to all organizational systems.`]),
-        p(`**2. Avoid a single point of failure**`), ul([`Ensure that a security failure **can only result when there is more than one failure in security procedures**. For example, **have password and question-based authentication**.`]),
-        p(`**3. Fail securely**`), ul([`When systems fail, for whatever reason, ensure that **sensitive information cannot be accessed by unauthorized users** even although **normal security procedures are unavailable**.`]),
+        h(4, `1. Base decisions on an explicit security policy`, '1-base-decisions-on-an-explicit-security-policy'), ul([`Define a security policy for the organization that sets out the **fundamental security requirements** that should apply to all organizational systems.`]),
+        h(4, `2. Avoid a single point of failure`, '2-avoid-a-single-point-of-failure'), ul([`Ensure that a security failure **can only result when there is more than one failure in security procedures**. For example, **have password and question-based authentication**.`]),
+        h(4, `3. Fail securely`, '3-fail-securely'), ul([`When systems fail, for whatever reason, ensure that **sensitive information cannot be accessed by unauthorized users** even although **normal security procedures are unavailable**.`]),
       ],
     },
     {

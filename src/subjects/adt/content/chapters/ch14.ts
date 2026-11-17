@@ -198,8 +198,8 @@ export const chapter14: Chapter = {
       id: 'swiss-cheese-model',
       title: `Swiss Cheese model`,
       blocks: [
-        p(`**Defensive layers have vulnerabilities**`), ul([`They are like **slices of Swiss cheese with holes** in the layer corresponding to these vulnerabilities.`]),
-        p(`**Vulnerabilities are dynamic**`), ul([`The **'holes' are not always in the same place** and the **size of the holes may vary** depending on the operating conditions.`]),
+        h(4, `Defensive layers have vulnerabilities`, 'defensive-layers-have-vulnerabilities'), ul([`They are like **slices of Swiss cheese with holes** in the layer corresponding to these vulnerabilities.`]),
+        h(4, `Vulnerabilities are dynamic`, 'vulnerabilities-are-dynamic'), ul([`The **'holes' are not always in the same place** and the **size of the holes may vary** depending on the operating conditions.`]),
         p(`**System failures occur when the holes line up and all of the defenses fail.**`),
       ],
     },

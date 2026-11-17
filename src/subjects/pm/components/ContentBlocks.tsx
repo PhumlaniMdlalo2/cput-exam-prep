@@ -1,5 +1,6 @@
 import type { NoteBlock, Tone } from '../types/content';
 import { cn } from '../lib/cn';
+import { InlineText } from '../../../shell/InlineText';
 
 const calloutStyles: Record<Tone, string> = {
   info: 'border-line bg-surface',
@@ -20,13 +21,13 @@ const calloutLabels: Record<Tone, string> = {
 const Block = ({ block }: { block: NoteBlock }) => {
   switch (block.type) {
     case 'p':
-      return <p className="mt-4 max-w-prose text-[0.98rem] leading-7 text-ink/90">{block.text}</p>;
+      return <p className="mt-4 max-w-prose text-[0.98rem] leading-7 text-ink/90"><InlineText text={block.text} /></p>;
 
     case 'h3':
-      return <h3 className="mt-9 text-xl">{block.text}</h3>;
+      return <h3 className="mt-9 text-xl"><InlineText text={block.text} /></h3>;
 
     case 'h4':
-      return <h4 className="mt-6 text-base">{block.text}</h4>;
+      return <h4 className="mt-6 text-base"><InlineText text={block.text} /></h4>;
 
     case 'list': {
       const Tag = block.ordered ? 'ol' : 'ul';
@@ -40,7 +41,7 @@ const Block = ({ block }: { block: NoteBlock }) => {
         >
           {block.items.map((item, index) => (
             <li key={index} className="pl-1">
-              {item}
+              <InlineText text={item} />
             </li>
           ))}
         </Tag>
@@ -50,8 +51,8 @@ const Block = ({ block }: { block: NoteBlock }) => {
     case 'definition':
       return (
         <div className="mt-5 rounded-r-lg border-l-4 border-accent bg-surface px-5 py-4 shadow-card">
-          <p className="font-serif text-lg font-semibold text-ink">{block.term}</p>
-          <p className="mt-1 text-[0.95rem] leading-7 text-ink/85">{block.text}</p>
+          <p className="font-serif text-lg font-semibold text-ink"><InlineText text={block.term} /></p>
+          <p className="mt-1 text-[0.95rem] leading-7 text-ink/85"><InlineText text={block.text} /></p>
         </div>
       );
 
@@ -97,7 +98,7 @@ const Block = ({ block }: { block: NoteBlock }) => {
                         key={cellIndex}
                         className="border-b border-line/70 px-4 py-3 leading-6 text-ink/85"
                       >
-                        {cell}
+                        <InlineText text={cell} />
                       </td>
                     ))}
                   </tr>
@@ -134,11 +135,11 @@ const Block = ({ block }: { block: NoteBlock }) => {
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-accent-strong">
             {block.title ?? calloutLabels[block.tone] ?? 'Note'}
           </p>
-          <p className="mt-1 text-[0.95rem] leading-7 text-ink/90">{block.text}</p>
+          <p className="mt-1 text-[0.95rem] leading-7 text-ink/90"><InlineText text={block.text} /></p>
           {block.items && block.items.length > 0 ? (
             <ul className="mt-2 list-disc space-y-1 pl-5 text-[0.92rem] leading-6 text-ink/85 marker:text-accent">
               {block.items.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index}><InlineText text={item} /></li>
               ))}
             </ul>
           ) : null}
@@ -153,7 +154,7 @@ const Block = ({ block }: { block: NoteBlock }) => {
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-accent-soft font-mono text-xs font-semibold text-accent-strong">
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <p className="pt-0.5 text-[0.96rem] leading-7 text-ink/90">{item}</p>
+              <p className="pt-0.5 text-[0.96rem] leading-7 text-ink/90"><InlineText text={item} /></p>
             </li>
           ))}
         </ol>
@@ -162,7 +163,7 @@ const Block = ({ block }: { block: NoteBlock }) => {
     case 'quote':
       return (
         <blockquote className="mt-6 border-l-4 border-gold/60 pl-5">
-          <p className="font-serif text-lg italic leading-8 text-ink/90">{block.text}</p>
+          <p className="font-serif text-lg italic leading-8 text-ink/90"><InlineText text={block.text} /></p>
           {block.source ? <cite className="mt-1 block text-xs text-muted">— {block.source}</cite> : null}
         </blockquote>
       );

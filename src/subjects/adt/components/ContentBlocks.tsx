@@ -1,5 +1,6 @@
 import type { ContentBlock } from '../content/types'
 import { cn } from '../lib/cn'
+import { InlineText } from '../../../shell/InlineText'
 
 const calloutStyles: Record<string, string> = {
   note: 'border-line bg-surface',
@@ -20,7 +21,7 @@ const calloutLabels: Record<string, string> = {
 const Block = ({ block }: { block: ContentBlock }) => {
   switch (block.type) {
     case 'paragraph':
-      return <p className="mt-4 max-w-prose text-[0.98rem] leading-7 text-ink/90">{block.text}</p>
+      return <p className="mt-4 max-w-prose text-[0.98rem] leading-7 text-ink/90"><InlineText text={block.text} /></p>
 
     case 'heading': {
       const classes =
@@ -32,7 +33,7 @@ const Block = ({ block }: { block: ContentBlock }) => {
       const Tag = block.level === 2 ? 'h2' : block.level === 3 ? 'h3' : 'h4'
       return (
         <Tag id={block.id} className={cn('scroll-mt-28 font-serif', classes)}>
-          {block.text}
+          <InlineText text={block.text} />
         </Tag>
       )
     }
@@ -49,7 +50,7 @@ const Block = ({ block }: { block: ContentBlock }) => {
         >
           {block.items.map((item, index) => (
             <li key={index} className="pl-1">
-              {item}
+              <InlineText text={item} />
             </li>
           ))}
         </Tag>
@@ -59,8 +60,8 @@ const Block = ({ block }: { block: ContentBlock }) => {
     case 'definition':
       return (
         <div className="mt-5 rounded-r-lg border-l-4 border-accent bg-surface px-5 py-4 shadow-card">
-          <p className="font-serif text-lg font-semibold text-ink">{block.term}</p>
-          <p className="mt-1 text-[0.95rem] leading-7 text-ink/85">{block.definition}</p>
+          <p className="font-serif text-lg font-semibold text-ink"><InlineText text={block.term} /></p>
+          <p className="mt-1 text-[0.95rem] leading-7 text-ink/85"><InlineText text={block.definition} /></p>
         </div>
       )
 
@@ -109,7 +110,7 @@ const Block = ({ block }: { block: ContentBlock }) => {
                         key={cellIndex}
                         className="border-b border-line/70 px-4 py-3 leading-6 text-ink/85"
                       >
-                        {cell}
+                        <InlineText text={cell} />
                       </td>
                     ))}
                   </tr>
@@ -146,7 +147,7 @@ const Block = ({ block }: { block: ContentBlock }) => {
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-accent-strong">
             {block.title ?? calloutLabels[block.variant] ?? 'Note'}
           </p>
-          <p className="mt-1 text-[0.95rem] leading-7 text-ink/90">{block.text}</p>
+          <p className="mt-1 text-[0.95rem] leading-7 text-ink/90"><InlineText text={block.text} /></p>
         </aside>
       )
 
