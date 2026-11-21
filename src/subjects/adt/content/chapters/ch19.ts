@@ -15,8 +15,18 @@ export const chapter19: Chapter = {
       blocks: [
         def(`Technical system`, `Hardware and software only — no humans or organisational processes.`),
         def(`Sociotechnical system`, `Large-scale system of hardware, software, people, processes and organisational policies, often a system of systems with subjective boundaries.`),
+        def(`System of systems`, `A collection of independent systems that combine to deliver capabilities none could deliver alone, with overlapping boundaries and control.`),
         def(`Systems engineering`, `Procuring, specifying, designing, implementing, validating, deploying and maintaining sociotechnical systems; concerned with services, constraints and how the system fulfils its purpose.`),
         p(`Stages: conceptual design → procurement → development → operation. Interdisciplinary working brings communication problems: the same words mean different things, disciplines make different assumptions, and professional boundaries affect judgement. Multiple professions are essential because no single discipline has all the technical, human, organisational, legal, business and operational knowledge needed.`),
+        table(
+          ['Stage', 'Meaning'],
+          [
+            ['Conceptual design', 'Explore the need and define a high-level vision before detailed requirements'],
+            ['Procurement', 'Decide scope, budget, requirements and whether to buy, configure or build'],
+            ['Development', 'Specify, design, build and integrate the subsystems into a working system'],
+            ['Operation', 'Use, maintain and evolve the system in its real organisational setting'],
+          ],
+        ),
         p(`Software engineers should take part in high-level systems decisions, understand adjacent technical and organisational layers, and avoid judging software in isolation from the human and organisational system.`),
         p(`Government functions such as benefits decisions, policing and air-traffic control still need human judgement for exceptions, accountability and policy trade-offs, so they cannot be fully automated.`),
         p(`Organisational effects: process changes and training, job changes/deskilling, policy conflicts and political power shifts (those controlling the system gain power). Ignoring the organisational environment leads to rejection.`),
@@ -38,6 +48,7 @@ export const chapter19: Chapter = {
         p(`Reliability is emergent: faults propagate through unforeseen inter-relationships, hardware, software and operator reliability all matter, and software reliability alone gives a false picture.`),
         p(`Non-deterministic: the same input may produce different outputs because people behave differently and hardware, software and data change frequently. Wicked problems cannot be fully specified; success is a subjective judgement of effectiveness in deployment, not conformance to the procurement spec. A national medical records system is wicked because patients, clinicians, managers and government want different things, workflows vary, privacy and safety constraints conflict, and needs change while the system is built.`),
         p(`Virtual museum conceptual design: provide 3-D models of ancient Greece through a standard browser plus immersive VR; high-level requirements cover multi-site museum partnership, shared content, usable navigation, performance, accessibility, preservation of artefacts and scalable hosting; key components are 3-D content repository, web/VR front ends, search/navigation, user profiling and rights management.`),
+        def(`Virtual reality (VR)`, `Computer-generated immersive environment that users can explore, often with special displays or controllers.`),
       ],
     },
     {
@@ -53,6 +64,7 @@ export const chapter19: Chapter = {
           `System vision document — readable, non-technical, summary plus appendices.`,
         ]),
         p(`Procurement decides scope, budget, timescale and high-level requirements, then whether to buy off-the-shelf, configurable ERP or custom. Drivers: state of other systems, regulation, competition, reorganisation and budget.`),
+        def(`Enterprise resource planning (ERP)`, `Configurable packaged system that embeds generic business workflows and databases for functions such as finance, HR and supply chain.`),
         p(`Off-the-shelf needs minimal configuration but rarely matches requirements exactly; configurable ERP adapts via built-in rules; custom systems are built specially and the specification becomes a legal contract. With large ERP systems, organisations must adapt requirements and processes because the package embeds generic workflows; failures occur when diverse local practices are forced into one standard system, users resist, data are poor and configuration is complex. Public-sector rules force detailed requirements and impede agile. Poor procurement causes late, unsuitable systems; political causes include management control and supplier relationships.`),
         important(`Dependability`, `Off-the-shelf systems give no control over security/dependability and configuration errors create vulnerabilities; custom systems require explicit dependability requirements and more time/budget.`),
       ],
@@ -63,7 +75,20 @@ export const chapter19: Chapter = {
       blocks: [
         p(`Development is plan-driven/waterfall because subsystems are built in parallel by different contractors, interfaces must be fixed early, and hardware changes are expensive. Requirements engineering and design are inextricably linked: constraints limit design and design reveals requirements; develop both concurrently as a spiral until detailed enough for subsystems.`),
         p(`Stages: requirements engineering → architectural design → requirements partitioning (allocate to hardware, software or processes) → subsystem engineering → system integration → system testing → deployment.`),
+        table(
+          ['Development stage', 'Meaning'],
+          [
+            ['Requirements engineering', 'Agree what the system must do and the constraints it must satisfy'],
+            ['Architectural design', 'Define major components, interfaces and structure'],
+            ['Requirements partitioning', 'Allocate responsibilities to hardware, software or operational processes'],
+            ['Subsystem engineering', 'Design and implement each allocated subsystem'],
+            ['System integration', 'Combine subsystems and test their interfaces'],
+            ['System testing', 'Check whole-system behaviour against requirements'],
+            ['Deployment', 'Install the system in its operational environment'],
+          ],
+        ),
         p(`Integration should be incremental: subsystems rarely finish together, and locating errors is cheaper when only one new subsystem is added. Big-bang integration hides which subsystem caused a failure. Test interfaces and whole-system behaviour; contractor disputes arise when subsystems make invalid assumptions about each other.`),
+        def(`Big-bang integration`, `Combining all subsystems at once; cheaper to plan but failures are hard to trace because many interfaces change together.`),
         p(`Sociotechnical integration issues: different groups make incompatible assumptions about interfaces and work; organisational resistance and power shifts make users avoid or undermine the system; and new work practices/training conflict with existing routines.`),
         p(`Deployment problems: wrong environmental assumptions, human resistance, coexistence with old systems, physical installation, data cleanup and operator training. These make deployment slower and costlier than expected.`),
       ],

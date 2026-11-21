@@ -59,6 +59,16 @@ export const chapter13: Chapter = {
         ),
         p(`Security assurance strategies: vulnerability avoidance (no external connection), attack detection and elimination (virus checkers), exposure limitation and recovery (backups). Mentcare examples: asset = patient record; exposure = unauthorised disclosure; vulnerability = weak authentication; threat = outsider seeking records; attack = SQL injection; control = encryption, input validation and access logging.`),
         p(`Extra threat/control pairs can generate requirements: unauthorised record viewing → role-based access control and audit logs; altered prescription → integrity checks and digital signatures; lost laptop → disk encryption and remote wipe.`),
+        table(
+          ['Control', 'Meaning'],
+          [
+            ['Encryption', 'Scrambles data so unauthorised readers cannot understand it'],
+            ['Role-based access control', "Permissions are granted according to a user's role and need to know"],
+            ['Audit log', 'Records who accessed or changed an asset and when'],
+            ['Digital signature', 'Uses cryptography to show who created data and whether it changed'],
+            ['Remote wipe', 'Deletes data from a lost or stolen device on command'],
+          ],
+        ),
       ],
     },
     {
@@ -105,6 +115,8 @@ export const chapter13: Chapter = {
       title: `Secure programming and testing`,
       blocks: [
         p(`Vulnerabilities are often language-specific: Java checks array bounds, C/C++ does not (buffer overflow exploited by the 1988 Internet worm). Security and reliability are linked: reliability improvements such as input checks also improve security. SQL poisoning inserts SQL fragments via forms; specifying input format avoids it.`),
+        def(`Buffer overflow`, `Writing more data to a fixed-size memory block than it can hold, letting an attacker overwrite adjacent memory or code.`),
+        def(`SQL poisoning/injection`, `Inserting SQL fragments through user input so the application runs unintended database commands.`),
         p(`Security testing is difficult because requirements are "shall not" statements that cannot be expressed as simple checkable constraints, and attackers are intelligent, persistent, and probe for weaknesses (possibly longer than testers). Unknown attacks cannot be derived into requirements.`),
         table(
           ['Validation approach', 'Description'],
@@ -118,6 +130,8 @@ export const chapter13: Chapter = {
         p(`Use a risk-based approach: focus testing on the most significant risks and also try to break the system by other means. Formal verification needs specialist expertise and is less cost-effective than static analysis.`),
         p(`Equity trading attacks: malicious orders can move prices, and intrusion can corrupt the transaction database. Counter with strong authentication, input validation, segregated networks, audit logs, anomaly monitoring, redundant transaction copies and recovery procedures.`),
         p(`Validate password protection by checking capture and storage (hash and salt, never plaintext), dictionary/brute-force resistance, lockout and delay policy, default/weak-account removal, password complexity and reset procedures; use password crackers and static analysis tools. Mentcare confidentiality checklist: unauthorised record access, disclosure via lost devices or logs, injection via forms, and weak session/access controls.`),
+        def(`Hash and salt`, `Hash stores a one-way fixed-length digest of a password; a random salt unique per user prevents identical passwords having identical stored values and defeats precomputed tables.`),
+        def(`Dictionary/brute-force attack`, `Trying common words or every possible password until one succeeds; lockouts, delays and complexity rules slow it down.`),
       ],
     },
     {

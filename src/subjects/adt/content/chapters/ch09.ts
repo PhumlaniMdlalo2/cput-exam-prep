@@ -32,10 +32,30 @@ export const chapter09: Chapter = {
       title: `Legacy systems`,
       blocks: [
         def(`Legacy system`, `Older system relying on languages and technology no longer used for new development, plus old hardware and legacy business processes.`),
-        p(`It is a sociotechnical system, not just software. Components: system hardware, support software, application software, application data, business processes, business policies and rules.`),
+        p(`It is a sociotechnical system, not just software: changing one component affects hardware, software, data and working practices.`),
+        table(
+          ['Component', 'Meaning'],
+          [
+            ['System hardware', 'Computers and devices the legacy software runs on'],
+            ['Support software', 'Operating system, compiler and middleware needed to run the application'],
+            ['Application software', 'Programs that implement the business functions'],
+            ['Application data', 'Records and files used by the business processes'],
+            ['Business processes', 'Workflows that people follow when using the system'],
+            ['Business policies and rules', 'Organisational rules embedded in procedures and code'],
+          ],
+        ),
         p(`Replacement is risky: no complete specification, tight integration with business processes, undocumented embedded rules, and new development may be late or over budget.`),
         p(`Change is expensive: inconsistent style, obsolete languages with few skilled staff, inadequate documentation, degraded structure, optimised hard-to-read code, and duplicated or inconsistent data.`),
         p(`Four strategies: scrap and modify business processes, continue maintenance, reengineer to improve maintainability, or replace with a new system.`),
+        table(
+          ['Strategy', 'Meaning'],
+          [
+            ['Scrap', 'Retire the software and change the business processes that depended on it'],
+            ['Maintain', 'Keep patching and adapting the system as it is'],
+            ['Reengineer', 'Restructure or rewrite the software without changing its functionality'],
+            ['Replace', 'Buy or build a new system to deliver the required services'],
+          ],
+        ),
         table(
           ['Quality', 'Business value', 'Strategy'],
           [
@@ -99,6 +119,16 @@ export const chapter09: Chapter = {
         def(`Refactoring`, `Continuous preventative improvement: change structure, complexity and readability without adding functionality.`),
         p(`Refactoring is inherent in agile methods (frequent change needs frequent refactoring; regression testing lowers risk) but applies to any process. Reengineering is a one-off tool-supported transformation; refactoring is continuous.`),
         p(`Bad smells: duplicate code, long methods, switch statements, data clumps and speculative generality. Transformations: extract method, consolidate conditional expression, pull up method.`),
+        table(
+          ['Bad smell', 'Meaning'],
+          [
+            ['Duplicate code', 'Same logic appears in several places, so changes must be repeated'],
+            ['Long method', 'One method does too much and is hard to understand or reuse'],
+            ['Switch statement', 'Repeated conditionals signal missing polymorphism or duplicated choices'],
+            ['Data clump', 'The same group of data fields is passed around together'],
+            ['Speculative generality', 'Code added for hypothetical future needs that never arise'],
+          ],
+        ),
         p(`If structure is badly degraded, code refactoring alone may be impossible; design refactoring applies patterns (Chapter 7) and is more expensive and difficult.`),
         important(`Compare`, `Reengineering = tool-supported, after costs rise. Refactoring = continuous, preventative. Neither adds functionality.`),
       ],

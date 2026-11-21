@@ -48,6 +48,15 @@ export const chapter12: Chapter = {
         p(`Goal: identify protection requirements so failures do not cause injury, death or damage. Safety requirements are often "shall not" requirements. Functional safety requirements define checking, recovery and protection features.`),
         p(`Hazard identification considers physical, electrical, biological and service-failure hazards. Hazard assessment judges likelihood and consequences, using relative terms (unlikely, rare, very high) because precise values are usually impossible.`),
         table(
+          ['Hazard class', 'Meaning'],
+          [
+            ['Physical', 'Direct physical harm such as moving parts, heat, radiation or pressure'],
+            ['Electrical', 'Shock, short circuits, fire or power loss'],
+            ['Biological', 'Harm from bacteria, toxins or contamination'],
+            ['Service failure', 'Failure of a required service, e.g. loss of monitoring or an incorrect dose'],
+          ],
+        ),
+        table(
           ['Risk category', 'Meaning'],
           [
             ['Intolerable', 'Must never arise or result in an accident'],
@@ -69,6 +78,15 @@ export const chapter12: Chapter = {
       blocks: [
         p(`Safety processes are plan-based with reviews and checks, fault avoidance/detection, plus explicit hazard identification and tracking. Process assurance asks: are the processes right, and are they being followed?`),
         p(`Safety-related activities: hazard logging and monitoring, project safety engineers, safety reviews, formal safety certification of critical components, and detailed configuration management.`),
+        table(
+          ['Activity', 'Meaning'],
+          [
+            ['Hazard log', 'Record of identified hazards, assessments, controls, responsibilities and status'],
+            ['Safety review', 'Independent check that hazards and evidence have been handled adequately'],
+            ['Safety certification', 'Formal approval that a component meets required safety standards'],
+            ['Configuration management', 'Control of versions and changes so the analysed system is the delivered system'],
+          ],
+        ),
         p(`Regulators assess a safety case: owners must convince them that best possible efforts were made. Evidence includes hazard analysis, test results, static analyses, process records and review records.`),
         p(`Agile is rarely used for safety-critical systems: regulation needs extensive product/process documentation and complete safety analysis of the specification, while agile interleaves spec and code. Test-driven development and adapted agile techniques can still be used.`),
       ],
@@ -80,8 +98,18 @@ export const chapter12: Chapter = {
         p(`Formal methods analyse a mathematical specification for consistency and can prove a program conforms to it, finding specification, design and programming errors (including concurrency deadlock, hard to test).`),
         p(`But formal methods cannot guarantee safety: the specification may not reflect real user requirements, proofs may contain errors, and proofs assume a particular mode of use. They are cost-effective when failure consequences are severe, concurrency is hard to test, specification errors matter and certification evidence is required. Engineers object because costs are visible, savings are uncertain, notations are unreadable to domain experts and methods scale poorly.`),
         def(`Model checking`, `Exhaustively explores all paths of a finite state model to check that a user-specified property always holds; valuable for concurrent systems. It is often cheaper than full program proof because it is automated, works on an abstract model and returns counterexamples, but it is limited to finite-state models and the property checked.`),
-        p(`Static analysis parses source text to find anomalies and aids inspections (supplement, not replacement). Fault classes: data (uninitialised/unused variables, array bounds), control (unreachable code, branches into loops), I/O (variables output twice), interface (parameter mismatches, uncalled functions), storage management (unassigned pointers, memory leaks).`),
-        p(`Levels: characteristic error checking, user-defined error checking and assertion checking. Valuable for weakly typed languages such as C and for security vulnerabilities such as buffer overflow.`),
+        p(`Static analysis parses source text to find anomalies and aids inspections (supplement, not replacement).`),
+        table(
+          ['Fault class', 'Examples'],
+          [
+            ['Data', 'Uninitialised or unused variables, array bounds violations'],
+            ['Control', 'Unreachable code, branches into loops'],
+            ['Input/output', 'Variables output twice, format mismatches'],
+            ['Interface', 'Parameter mismatches, uncalled functions'],
+            ['Storage management', 'Unassigned pointers, memory leaks'],
+          ],
+        ),
+        p(`Levels: characteristic error checking (known language hazards), user-defined error checking (project rules) and assertion checking (conditions expected to hold at a point). Valuable for weakly typed languages such as C and for security vulnerabilities such as buffer overflow.`),
       ],
     },
     {
@@ -93,6 +121,8 @@ export const chapter12: Chapter = {
         p(`Certification/licensing: registration can assure competence and independent accountability, but it can also create false confidence, gatekeeping and costs; engineers can be professional without state licensing if employers and regulators enforce competence.`),
         p(`Structured arguments use evidence → argument → claim, with claims in a hierarchy: evidence at lower levels supports higher-level safety claims. Evidence must be redundant and diverse (e.g. tests + static analysis + formal argument).`),
         p(`Software safety arguments concentrate only on faults with hazard potential; they show the program cannot reach an unsafe state, which is cheaper than proving full correctness. Four steps: assume an unsafe state, define its predicate, analyse paths to show their postconditions contradict it, and repeat for all hazards.`),
+        def(`Predicate`, `A logical condition describing an unsafe state, e.g. currentDose > maxDose.`),
+        def(`Postcondition`, `A condition guaranteed to hold after a program statement or path has executed.`),
         p(`Insulin pump example: unsafe state currentDose > maxDose; all three paths to administerInsulin end with dose ≤ maxDose, contradiction proves safety. Working backwards ignores intermediate states overwritten later.`),
       ],
     },
