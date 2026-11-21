@@ -103,6 +103,17 @@ export const chapter09: Chapter = {
         important(`Compare`, `Reengineering = tool-supported, after costs rise. Refactoring = continuous, preventative. Neither adds functionality.`),
       ],
     },
+    {
+      id: 'exam-application-prompts',
+      title: `Exam application prompts`,
+      blocks: [
+        p(`**Technology forces change.** New OS/hardware/compiler → old interface or support tool obsolete → vendor support ends → subsystem cannot run or be maintained → change it or it becomes useless.`),
+        p(`**Impact analysis.** Classify request → locate affected code, data and interfaces → trace dependencies → estimate cost, effort, schedule and risk → plan implementation, regression testing and release.`),
+        p(`**Low quality, high value reengineering.** Freeze functionality → add wrappers → phase one component at a time → run old and new in parallel → regression test → cut over with minimal disruption.`),
+        p(`**Maintainability programme.** Baseline current maintenance → collect and validate change/effort data → choose metrics → monitor trends → feed improvements into the process; maintainable code is a professional duty.`),
+        p(`**Maintenance types overlap.** One change can repair a fault, adapt to a new OS and add functionality simultaneously, so the categories are not mutually exclusive.`),
+      ],
+    },
   ],
   summary: [
     ul([

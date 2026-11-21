@@ -106,6 +106,17 @@ export const chapter14: Chapter = {
         p(`Mentcare example: critical services are the information service (current diagnosis/treatment) and warning service (dangerous patients), not the complete record. Local summary records, peer-to-peer exchange, a backup server and integrity checking maintain service. Multiple copies risk confidentiality, so limit downloads, encrypt disks and network traffic, and delete local data after sessions.`),
       ],
     },
+    {
+      id: 'exam-application-prompts',
+      title: `Exam application prompts`,
+      blocks: [
+        p(`**Ambulance dispatch.** Critical services are call taking and dispatch; use a backup server with snapshots/failover, local data, peer-to-peer communication, watchdogs/alerts/monitoring, multi-stage authentication and encryption, then test recovery and reinstatement.`),
+        p(`**Threat taxonomy.** Technical failure, human error, cyberattack and environmental/organisational events; controls include backups, diverse components, training/checklists, authentication/firewalls and alternate sites.`),
+        p(`**Reason and blame.** Slips/lapses are execution failures, mistakes are planning failures, and active failures interact with latent conditions. Punitive policies suppress reporting and learning, weakening resilience.`),
+        p(`**Survivability and agile.** Goals/architecture → critical services → simulated attacks → essential components and strategies. Agile helps when resilience requirements and attack tests are explicit, but frequent change weakens assurance.`),
+        p(`**Equity attacks and logging.** Resist, recognise and recover from malicious orders or corrupted transaction data; covert all-staff logging needs consent, transparency, proportionality and privacy safeguards.`),
+      ],
+    },
   ],
   summary: [
     ul([

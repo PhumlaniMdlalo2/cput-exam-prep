@@ -117,6 +117,17 @@ export const chapter11: Chapter = {
         p(`Fault injection deliberately inserts errors to estimate how many real faults testing will find. It works for programming errors but not for requirements or design faults, because injected faults rarely match those causes.`),
       ],
     },
+    {
+      id: 'exam-application-prompts',
+      title: `Exam application prompts`,
+      blocks: [
+        p(`**Very low failure rate.** A lifetime target cannot be validated by finite testing: too few failures are observed, so the confidence interval remains too wide even with accelerated testing.`),
+        p(`**24/7 communications switch.** Use redundant self-monitoring channels, automatic failover and diverse technology where common-mode risk exists; availability metrics matter more than safety-case evidence.`),
+        p(`**Reactor protection.** Independent diverse monitor, simplified for validation, replicated, low POFOD, plus an independent relief valve so damage is limited if software fails.`),
+        p(`**N-version radiation therapy.** Safety need is high, but only acceptable if specification errors are validated, versions are genuinely diverse and the gain justifies cost; a simpler independently validated protection system may be preferable.`),
+        p(`**Exceptions and liability.** Typed exceptions, controlled propagation, finally cleanup and default handlers prevent silent crashes; known faults create ethical, compensation and warranty duties.`),
+      ],
+    },
   ],
   summary: [
     ul([

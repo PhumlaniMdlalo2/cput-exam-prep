@@ -96,6 +96,17 @@ export const chapter12: Chapter = {
         p(`Insulin pump example: unsafe state currentDose > maxDose; all three paths to administerInsulin end with dose ≤ maxDose, contradiction proves safety. Working backwards ignores intermediate states overwritten later.`),
       ],
     },
+    {
+      id: 'exam-application-prompts',
+      title: `Exam application prompts`,
+      blocks: [
+        p(`**Safety versus reliability.** A system can meet its specification yet be unsafe if the specification omits hazards; safety is freedom from damage, so reliability and availability are necessary but insufficient.`),
+        p(`**Three strategies with examples.** Avoid hazard: no external network connection; detect and remove hazard: pressure sensors; limit damage: independent relief valve or airbags.`),
+        p(`**Insulin, roller-coaster and train.** Missed supply changes or excessive dose limits → alerts, locked limits and confirmation; unlocked harness or overspeed → interlocks, independent sensors and automatic braking; train → receive/validate signal and speed data, compare, brake and fail safe.`),
+        p(`**Formal methods and model checking.** Cost-effective for severe consequences, concurrency and certification; objections are cost, notation, training and scale. Model checking is automated on finite models and gives counterexamples; full proof is costlier.`),
+        p(`**Safety case and licensing.** Evidence is needed for medical, nuclear, rail/air and industrial control; certification can assure competence but can also create gatekeeping and false confidence.`),
+      ],
+    },
   ],
   summary: [
     ul([

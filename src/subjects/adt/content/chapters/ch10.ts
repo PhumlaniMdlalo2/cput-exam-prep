@@ -103,6 +103,17 @@ export const chapter10: Chapter = {
         important(`Exam trap`, `Formal methods reduce some classes of error but do not guarantee a fault-free system; proofs and specifications can themselves contain errors.`),
       ],
     },
+    {
+      id: 'exam-application-prompts',
+      title: `Exam application prompts`,
+      blocks: [
+        p(`**Why dependability matters.** Loss of life, financial loss, environmental damage, information loss or corruption, legal/regulatory failure, and reputation or business continuity.`),
+        p(`**Cyberattack example.** Denial-of-service removes availability; corrupted records reduce reliability and integrity; malware can disable safety controls, so resilience to attacks is a dependability property.`),
+        p(`**Sociotechnical example.** Train control depends on signals, on-board software, communications, maintenance procedures and driver actions; correct software can still be unsafe if data are stale or an operator misses a signal.`),
+        p(`**Regulation versus innovation.** Regulators should require evidence, safety cases and outcomes rather than freeze old development methods; government functions still need human judgement for exceptions, accountability and policy trade-offs.`),
+        p(`**Redundancy versus diversity.** Extra backup alone can fail identically (Ariane 5); diversity uses different implementations or technology to prevent common-mode failure, but adds complexity.`),
+      ],
+    },
   ],
   summary: [
     ul([

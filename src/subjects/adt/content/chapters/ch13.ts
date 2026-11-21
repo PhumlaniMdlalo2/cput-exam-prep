@@ -120,6 +120,17 @@ export const chapter13: Chapter = {
         p(`Validate password protection by checking capture and storage (hash and salt, never plaintext), dictionary/brute-force resistance, lockout and delay policy, default/weak-account removal, password complexity and reset procedures; use password crackers and static analysis tools. Mentcare confidentiality checklist: unauthorised record access, disclosure via lost devices or logs, injection via forms, and weak session/access controls.`),
       ],
     },
+    {
+      id: 'exam-application-prompts',
+      title: `Exam application prompts`,
+      blocks: [
+        p(`**Mentcare terminology.** Asset = patient record; exposure = disclosure; vulnerability = weak authentication; threat = outsider seeking records; attack = SQL injection; control = encryption, input validation and audit logs.`),
+        p(`**Security versus safety.** Attacks are deliberate, concealed, adaptive and persistent, and may intentionally cause shutdown; safety problems are accidental. "Shall not" security requirements are therefore harder to test.`),
+        p(`**Layered protection.** Like fence → locked door → locked cabinet → safe, platform, application and record-level controls each delay an attacker and limit damage if another layer fails.`),
+        p(`**Equity trading.** Malicious orders: authentication, authorisation limits, input validation and anomaly monitoring; corrupted database: integrity checks, access control, clean backups and audit reconciliation.`),
+        p(`**Password validation.** Check hash-and-salt storage, dictionary/brute-force resistance, lockout/delay, default-account removal and reset procedures; Mentcare checklist covers access, lost devices, logs, injection and weak sessions.`),
+      ],
+    },
   ],
   summary: [
     ul([

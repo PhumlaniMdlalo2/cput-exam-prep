@@ -82,6 +82,17 @@ export const chapter19: Chapter = {
         tip(`Exam trap`, `Legacy systems become more expensive to change as documentation, skills, data quality and structure degrade.`),
       ],
     },
+    {
+      id: 'exam-application-prompts',
+      title: `Exam application prompts`,
+      blocks: [
+        p(`**Characteristics and engineer role.** Sociotechnical systems = technology, people, processes and policies, often systems of systems; emergent, non-deterministic and wicked. Engineers must join high-level decisions and consider human and organisational layers.`),
+        p(`**Automation limits and disciplines.** Benefits, policing and air-traffic control need human judgement for exceptions, accountability and policy trade-offs; teams need technical, human, organisational, legal, business and operational knowledge.`),
+        p(`**Wicked records and virtual museum.** National records have conflicting stakeholders, variable workflows, privacy/safety conflicts and changing needs. Museum design: 3-D repository, browser/VR front ends, navigation/search, rights management, performance and accessibility.`),
+        p(`**ERP and integration.** Large ERP packages embed generic workflows; adapt requirements or diverse local practices, user resistance, poor data and configuration cause failure. Integration issues: incompatible assumptions, power shifts and training conflicts.`),
+        p(`**Profession and ethics.** For a distinct profession: specialist knowledge and high-stakes trade-offs; against: overlap with other disciplines. If access is denied over redundancies, escalate, do not falsify completion, and proceed only under lawful, agreed terms.`),
+      ],
+    },
   ],
   summary: [
     ul([
