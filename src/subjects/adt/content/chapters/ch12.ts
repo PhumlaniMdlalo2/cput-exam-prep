@@ -1,5 +1,5 @@
 import type { Chapter } from '../types'
-import { def, important, p, table, ul } from '../helpers'
+import { def, important, ol, p, table, ul } from '../helpers'
 
 export const chapter12: Chapter = {
   id: 'ch12',
@@ -105,6 +105,28 @@ export const chapter12: Chapter = {
         p(`**Insulin, roller-coaster and train.** Missed supply changes or excessive dose limits → alerts, locked limits and confirmation; unlocked harness or overspeed → interlocks, independent sensors and automatic braking; train → receive/validate signal and speed data, compare, brake and fail safe.`),
         p(`**Formal methods and model checking.** Cost-effective for severe consequences, concurrency and certification; objections are cost, notation, training and scale. Model checking is automated on finite models and gives counterexamples; full proof is costlier.`),
         p(`**Safety case and licensing.** Evidence is needed for medical, nuclear, rail/air and industrial control; certification can assure competence but can also create gatekeeping and false confidence.`),
+      ],
+    },
+    {
+      id: 'essay-plans',
+      title: `Essay plans`,
+      blocks: [
+        p(`**Safety requirements engineering.** State the goal: protection requirements that prevent injury, death and environmental damage; safety requirements are often shall-not statements.`),
+        ol([
+          `Identify physical, electrical, biological and service-failure hazards; assess likelihood and severity in relative terms.`,
+          `Classify risk as intolerable, ALARP or acceptable; note that boundaries are social and political judgements.`,
+          `Use inductive bottom-up or deductive top-down analysis; fault trees put the hazard at the root and link causes with AND/OR conditions.`,
+          `Reduce risk by hazard avoidance, detection/removal and damage limitation, e.g. pressure sensors plus an independent relief valve.`,
+          `Conclude that complete safety is impossible because accidents have multiple causes, so evidence and layered defences are essential.`,
+        ]),
+        p(`**Safety cases and structured arguments.** Define a safety case as evidence and argument that a system is adequately safe in a given environment.`),
+        ol([
+          `List contents: system description, safety requirements, hazard/risk analysis, design analysis, V&V, reviews, competences, QA, change management and related cases.`,
+          `Explain evidence → argument → claim hierarchies and proof by contradiction showing unsafe states unreachable from the code backwards.`,
+          `Explain formal methods and model checking of all paths in a finite state model, including deadlock detection.`,
+          `State limits: specifications may not reflect requirements, proofs can contain errors and usage assumptions may be wrong; static analysis finds data, control, I/O, interface and storage faults but supplements inspections.`,
+          `Conclude that these techniques provide evidence, not guarantees of safety.`,
+        ]),
       ],
     },
   ],

@@ -131,6 +131,28 @@ export const chapter13: Chapter = {
         p(`**Password validation.** Check hash-and-salt storage, dictionary/brute-force resistance, lockout/delay, default-account removal and reset procedures; Mentcare checklist covers access, lost devices, logs, injection and weak sessions.`),
       ],
     },
+    {
+      id: 'essay-plans',
+      title: `Essay plans`,
+      blocks: [
+        p(`**Security risk assessment and management.** State that security is a business issue: spend no more protecting an asset than its value.`),
+        ol([
+          `Describe policy contents: access strategy, assets to protect, protection levels, responsibilities and maintenance procedures.`,
+          `Explain preliminary, design/life-cycle and operational risk assessment stages.`,
+          `Process: identify assets, assess exposure and threats, decompose threats into attacks, identify controls, then define security requirements.`,
+          `Classify requirements as avoidance, detection or mitigation.`,
+          `Contrast with safety: intelligent adversaries conceal, adapt, persist and may intentionally shut down; conclude with risk-based policy-driven management.`,
+        ]),
+        p(`**Secure systems design.** Explain protection versus distribution: organise assets to resist attack but spread them so one attack cannot destroy everything.`),
+        ol([
+          `Explain the conflict: distributed assets cost more and may harm usability or performance.`,
+          `Describe layered protection at platform, application and record level using a fence/door/cabinet/safe analogy.`,
+          `List the ten guidelines: explicit policy, no single point of failure, fail securely, usability, logging, redundancy/diversity, input formats, compartmentalisation, deployment and recovery.`,
+          `Link secure programming to input validation, memory checks and avoiding SQL poisoning and buffer overflow.`,
+          `Explain testing difficulty from shall-not requirements and intelligent attackers; use experience-based, penetration, tool-based and formal validation.`,
+        ]),
+      ],
+    },
   ],
   summary: [
     ul([

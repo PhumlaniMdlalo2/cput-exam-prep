@@ -93,6 +93,28 @@ export const chapter19: Chapter = {
         p(`**Profession and ethics.** For a distinct profession: specialist knowledge and high-stakes trade-offs; against: overlap with other disciplines. If access is denied over redundancies, escalate, do not falsify completion, and proceed only under lawful, agreed terms.`),
       ],
     },
+    {
+      id: 'essay-plans',
+      title: `Essay plans`,
+      blocks: [
+        p(`**Sociotechnical characteristics and implications.** Define a sociotechnical system as technology plus people, processes and policies, often a system of systems with subjective boundaries.`),
+        ol([
+          `Emergent functional and non-functional properties (reliability, performance, safety, security) depend on relationships and appear only after integration.`,
+          `Non-determinism arises from human behaviour and frequent hardware, software and data changes; reliability depends on hardware, software and operator reliability.`,
+          `Wicked problems have no complete specification, stakeholders disagree and success is judged by deployed effectiveness.`,
+          `Implications: software engineers must join high-level decisions, understand adjacent layers and avoid judging software in isolation.`,
+          `Conclude that design and evaluation must address the whole sociotechnical system, not code alone.`,
+        ]),
+        p(`**Systems engineering stages.** Define systems engineering as procuring, specifying, designing, implementing, validating, deploying and maintaining sociotechnical systems.`),
+        ol([
+          `Conceptual design: needs, stakeholders, proposals, feasibility, structure and a non-technical vision document.`,
+          `Procurement: scope, budget and high-level requirements; drivers are other systems, regulation, competition, reorganisation and budget; choose off-the-shelf, configurable or custom.`,
+          `Development is plan-driven because parallel subsystems need fixed interfaces: requirements, architecture, partitioning, subsystem engineering, integration, testing and deployment.`,
+          `Integration should be incremental; deployment problems include environment, resistance, physical installation, data and training.`,
+          `Operation requires flexible processes; evolution is costly through interactions, missing rationale and corrupted structure; conclude with a lifecycle view.`,
+        ]),
+      ],
+    },
   ],
   summary: [
     ul([

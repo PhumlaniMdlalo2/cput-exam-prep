@@ -114,6 +114,28 @@ export const chapter09: Chapter = {
         p(`**Maintenance types overlap.** One change can repair a fault, adapt to a new OS and add functionality simultaneously, so the categories are not mutually exclusive.`),
       ],
     },
+    {
+      id: 'essay-plans',
+      title: `Essay plans`,
+      blocks: [
+        p(`**Managing legacy systems.** Define a legacy system as old hardware, software and business processes; list scrap, maintain, re-engineer and replace.`),
+        ol([
+          `Assess business value from users, business customers and managers using system use, supported processes, dependability and outputs.`,
+          `Assess quality using change requests, interface count, data volume/quality, documentation and scarce skills; high request rates and poor data mean low quality.`,
+          `Map the matrix: low/low → scrap; low/high → re-engineer or replace; high/low → replace, scrap or maintain; high/high → maintain.`,
+          `Explain replacement risks (no complete spec, embedded rules, tight process integration) and why re-engineering reduces risk and cost.`,
+          `Conclude that the choice balances business value, system quality, risk and cost.`,
+        ]),
+        p(`**Reengineering versus refactoring.** Define reengineering as one-off restructuring without functionality change after maintenance costs rise; define refactoring as continuous preventative improvement.`),
+        ol([
+          `Explain reduced risk and cost: no new specification, staffing or development risk.`,
+          `List activities: source translation, reverse engineering, structure improvement, modularisation and data reengineering.`,
+          `Name smells: duplicate code, long methods, switch statements, data clumps and speculative generality.`,
+          `Compare: reengineering is tool-supported and one-off; refactoring is ongoing, common in agile and supported by regression testing.`,
+          `Conclude both preserve functionality; reengineering addresses accumulated debt while refactoring prevents it.`,
+        ]),
+      ],
+    },
   ],
   summary: [
     ul([

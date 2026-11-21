@@ -128,6 +128,28 @@ export const chapter11: Chapter = {
         p(`**Exceptions and liability.** Typed exceptions, controlled propagation, finally cleanup and default handlers prevent silent crashes; known faults create ethical, compensation and warranty duties.`),
       ],
     },
+    {
+      id: 'essay-plans',
+      title: `Essay plans`,
+      blocks: [
+        p(`**Fault management and fault-tolerant architectures.** Define fault, error and failure, noting that faults need not cause errors and errors need not cause failures.`),
+        ol([
+          `Avoidance prevents faults; detection/removal uses V&V before deployment; tolerance prevents runtime failures.`,
+          `Protection systems are independent, replicated, diverse, simpler than control software and designed for low POFOD.`,
+          `Self-monitoring compares channels and raises an exception on disagreement; hardware and software must be diverse to avoid common-mode failure.`,
+          `N-version programming runs independent versions and takes a majority vote; hardware TMR replicates three components and ignores the odd output.`,
+          `Explain that teams share specification errors and problem-solving habits, so gains are limited; conclude independence must be real.`,
+        ]),
+        p(`**Reliability requirements and measurement.** Separate functional and quantitative requirements.`),
+        ol([
+          `Functional requirements specify checking, recovery, redundancy and process controls.`,
+          `Quantitative metrics: POFOD for intermittent demands, ROCOF for many requests, MTTF as 1/ROCOF for long transactions, availability for non-stop systems.`,
+          `Statistical testing uses an operational profile of input classes and real probabilities; defect-test data is atypical.`,
+          `Problems: profile uncertainty, data cost, too few failures for lifetime targets and ambiguous failure recognition.`,
+          `Conclude that reliability claims require metrics tied to usage and evidence, not simply removing faults.`,
+        ]),
+      ],
+    },
   ],
   summary: [
     ul([

@@ -114,6 +114,28 @@ export const chapter10: Chapter = {
         p(`**Redundancy versus diversity.** Extra backup alone can fail identically (Ariane 5); diversity uses different implementations or technology to prevent common-mode failure, but adds complexity.`),
       ],
     },
+    {
+      id: 'essay-plans',
+      title: `Essay plans`,
+      blocks: [
+        p(`**Achieving dependability and its economics.** Define dependability and its five properties; state that the required level depends on system type, asset value and failure consequence.`),
+        ol([
+          `Achieve it by error avoidance, V&V, fault tolerance, protection against attacks, correct configuration, recognition and recovery.`,
+          `Explain exponentially rising cost: more elaborate techniques, redundant hardware and extensive validation/evidence.`,
+          `Discuss accepting failure costs for ordinary business systems needing only modest dependability.`,
+          `Balance reputation, legal and social factors: safety-critical and regulated systems justify high investment.`,
+          `Conclude that dependability is a risk-based economic choice, not maximum reliability everywhere.`,
+        ]),
+        p(`**Formal methods.** Define them as mathematical models used to analyse, prove or transform a system.`),
+        ol([
+          `Explain verification-based proof of specification-program equivalence and refinement-based correctness-preserving transformation.`,
+          `Explain model checking of finite-state models and its ability to find deadlock and give counterexamples.`,
+          `Identify errors addressed: specification omissions, concurrency deadlock and specification-program inconsistencies.`,
+          `List benefits: detailed requirements analysis, automated consistency checks, lower testing cost and stronger evidence.`,
+          `Explain limited use: scale, unfamiliar notation, weak tools, visible costs, unclear savings and agile conflict; conclude they support but do not guarantee correctness.`,
+        ]),
+      ],
+    },
   ],
   summary: [
     ul([

@@ -117,6 +117,28 @@ export const chapter14: Chapter = {
         p(`**Equity attacks and logging.** Resist, recognise and recover from malicious orders or corrupted transaction data; covert all-staff logging needs consent, transparency, proportionality and privacy safeguards.`),
       ],
     },
+    {
+      id: 'essay-plans',
+      title: `Essay plans`,
+      blocks: [
+        p(`**Resilience engineering.** Define resilience as a judgement about continuity of critical services during disruption; note that it has no precise metrics.`),
+        ol([
+          `Assume failures are unavoidable after good reliability engineering; explain recognition, resistance, recovery and reinstatement, with resistance proactive or reactive.`,
+          `Describe threats to confidentiality, integrity and availability; controls include authentication, encryption and firewalls.`,
+          `Give redundancy/diversity examples: separate copies, multi-stage authentication and over-provisioned servers.`,
+          `Planning steps: classify assets, identify threats, decide recognition, resistance, recovery and reinstatement, then test the plan.`,
+          `Resilient organisations are responsive, monitor internal/external threats, anticipate and learn; conclude resilience is sociotechnical and expert-assessed.`,
+        ]),
+        p(`**Operational and management processes.** Define operational processes as using a system for its defined purpose; they must be documented and operators trained.`),
+        ol([
+          `Contrast efficient operation (optimisation/control, information hiding, automation, specialisation) with problem management (flexibility, sharing, spare capacity, role sharing).`,
+          `Explain why redundant and shared information aids recovery and why rigid processes block workarounds.`,
+          `Compare person and systems approaches: blame versus fallibility caused by workload, training and design; include active failures and latent conditions.`,
+          `Swiss cheese model: holes in defensive layers line up; redundancy and diversity create barriers.`,
+          `Automation detects and starts recovery but reduces available people when it fails; conclude flexible, learning-oriented processes improve resilience.`,
+        ]),
+      ],
+    },
   ],
   summary: [
     ul([
